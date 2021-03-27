@@ -3,3 +3,5 @@
 function s_player_script(){
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left);
 }
+
+//testestestestes
