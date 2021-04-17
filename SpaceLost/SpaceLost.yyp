@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"s_player_script","path":"scripts/s_player_script/s_player_script.yy",},"order":0,},
+    {"id":{"name":"o_csv_loader","path":"objects/o_csv_loader/o_csv_loader.yy",},"order":3,},
     {"id":{"name":"EX","path":"sprites/EX/EX.yy",},"order":0,},
     {"id":{"name":"o_block","path":"objects/o_block/o_block.yy",},"order":1,},
     {"id":{"name":"o_player_unit","path":"objects/o_player_unit/o_player_unit.yy",},"order":2,},
