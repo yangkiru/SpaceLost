@@ -9,6 +9,7 @@ function s_player_script(){
 		var pd = point_direction(x,y,x+hInput,y-vInput); // get direction
 		var dd = angle_difference(phy_rotation, pd);
 		phy_rotation -= min(abs(dd), tSpd * tSpd_const) * sign(dd);
+		phy_angular_velocity = 0;
 		//physics_fixture_set_angular_damping(self, 0.9);
 		
 		physics_apply_local_force(0, 0, mSpd * mSpd_const, 0); // move foward

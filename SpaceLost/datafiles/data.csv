@@ -1,12 +1,12 @@
-Type,Group Name,Name,Value,Description
-Player,player,mSpd,1,이동 속도
+,Group Name,Name,Value,Description
+Player,player,mSpd,3,이동 속도
 ,,mSpd_const,10000,이동 속도 상수
 ,,tSpd,1,회전 속도
 ,,tSpd_const,5,회전 속도 상수
 ,,oxygen,240,산소
 ,,oxygen_usage,1,산소 소비량/s
 ,,hp_max,100,체력(HP)
-,,rope_length,10,로프 길이
+,,rope_length,5,로프 길이
 ,,strength,3,악력
 ,,,0.1,크리티컬 확률
 ,,money,1,머니
