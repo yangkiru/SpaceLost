@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7ca0a861-ed8f-4c61-9352-34daaee8c997","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "SpaceLost",
     "path": "SpaceLost.yyp",
