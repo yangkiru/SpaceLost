@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "EX",
-    "path": "sprites/EX/EX.yy",
+    "name": "idle",
+    "path": "sprites/idle/idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -13,7 +13,7 @@
   },
   "physicsObject": true,
   "physicsSensor": false,
-  "physicsShape": 0,
+  "physicsShape": 2,
   "physicsGroup": 0,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
@@ -23,8 +23,14 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":76.0,"y":73.0,},
-    {"x":58.0,"y":73.0,},
+    {"x":82.0,"y":3.0,},
+    {"x":103.0,"y":46.0,},
+    {"x":121.0,"y":103.0,},
+    {"x":100.0,"y":146.0,},
+    {"x":41.0,"y":146.0,},
+    {"x":12.0,"y":99.0,},
+    {"x":31.0,"y":45.0,},
+    {"x":51.0,"y":3.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
