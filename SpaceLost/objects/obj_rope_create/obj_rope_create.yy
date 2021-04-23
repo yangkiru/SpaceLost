@@ -7,11 +7,8 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "con_dynamic_parent",
-    "path": "objects/con_dynamic_parent/con_dynamic_parent.yy",
-  },
-  "physicsObject": true,
+  "parentObjectId": null,
+  "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 0,

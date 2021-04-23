@@ -8,3 +8,4 @@ tSpd_const = real(p[? "tSpd_const"]); // for big number
 physics_set_density(self, global.data[? "basic_ship"][? "density"]);
 hInput_last = 0;
 vInput_last = 0;
+rope_ready = false;

@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "con",
+    "path": "folders/Objects/con.yy",
   },
   "resourceVersion": "1.0",
   "name": "con_static_parent",
