@@ -1,6 +1,5 @@
 {
   "resources": [
-    {"id":{"name":"s_player_script","path":"scripts/s_player_script/s_player_script.yy",},"order":0,},
     {"id":{"name":"obj_rope","path":"objects/obj_rope/obj_rope.yy",},"order":5,},
     {"id":{"name":"con_csv_loader","path":"objects/con_csv_loader/con_csv_loader.yy",},"order":3,},
     {"id":{"name":"EX","path":"sprites/EX/EX.yy",},"order":0,},
@@ -8,11 +7,14 @@
     {"id":{"name":"Sprite6","path":"sprites/Sprite6/Sprite6.yy",},"order":19,},
     {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},"order":18,},
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":1,},
+    {"id":{"name":"Sprite8","path":"sprites/Sprite8/Sprite8.yy",},"order":20,},
     {"id":{"name":"con_dynamic_parent","path":"objects/con_dynamic_parent/con_dynamic_parent.yy",},"order":7,},
     {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":4,},
     {"id":{"name":"idle","path":"sprites/idle/idle.yy",},"order":1,},
-    {"id":{"name":"con_rope_create","path":"objects/con_rope_create/con_rope_create.yy",},"order":6,},
+    {"id":{"name":"obj_rope_create","path":"objects/obj_rope_create/obj_rope_create.yy",},"order":6,},
+    {"id":{"name":"con_reset","path":"objects/con_reset/con_reset.yy",},"order":11,},
     {"id":{"name":"obj_rope_start","path":"objects/obj_rope_start/obj_rope_start.yy",},"order":9,},
+    {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},"order":10,},
     {"id":{"name":"obj_player_unit","path":"objects/obj_player_unit/obj_player_unit.yy",},"order":2,},
     {"id":{"name":"con_static_parent","path":"objects/con_static_parent/con_static_parent.yy",},"order":8,},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},"order":17,},

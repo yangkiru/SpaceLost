@@ -1,8 +1,3 @@
-if(parent != -1){
-	if (instance_exists(parent))
-		draw_line_width(x,y, parent.x, parent.y, 3);
-	else
-		parent = -1;
-}
-else
-	draw_self();
+//if (parent != -1)
+//    draw_line_width_colour(round(x), round(y), round(parent.x), round(parent.y), 4, c_white, c_white);
+draw_self();

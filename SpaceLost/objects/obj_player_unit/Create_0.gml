@@ -3,22 +3,17 @@ anchor = obj_player_ship;
 rope_length = global.data[? "player"][? "rope_length"];
 show_debug_message(rope_length);
 rope_length = real(rope_length);
+rope_ready = false;
 
 physics_set_density(self, global.data[? "player"][? "density"]);
 
-rope = instance_create(x, y, con_rope_create);
-head = ds_queue_dequeue(rope.q);
-tail = ds_queue_tail(rope.q);
+//head = ds_queue_head(rope.q);
+//head.phy_position_x = anchor.x;
+//head.phy_position_y = anchor.y;
 
-instance_destroy(head);
+//physics_joint_revolute_create(anchor,head,anchor.x,anchor.y,-1, 1, 1, 0 , 0, 0, 0);
 
-head = ds_queue_head(rope.q);
-head.phy_position_x = x;
-head.phy_position_y = y;
+//phy_position_x = tail.phy_position_x;
+//phy_position_y = tail.phy_position_y;
 
-physics_joint_revolute_create(self,head,x,y,0,0,0,0,0,0,0);
-
-tail.phy_position_x = anchor.x;
-tail.phy_position_y = anchor.y;
-
-physics_joint_revolute_create(anchor,tail,anchor.x,anchor.y,0,0,0,0,0,0,0);
+//physics_joint_revolute_create(anchor,tail,anchor.x,anchor.y,0,0,0,0,0,0,0);
