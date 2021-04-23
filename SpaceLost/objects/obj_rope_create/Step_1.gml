@@ -50,13 +50,13 @@ if (!connected && anchor_1 != -1 && anchor_2 != -1) {
 	head.phy_position_y = anchor_1.phy_position_y;
 	head.phy_rotation = anchor_1.phy_rotation;
 
-	physics_joint_revolute_create(anchor_1, head, anchor_1.phy_position_x, anchor_1.phy_position_y, -1, 1, 1, 0 , 0, 0, 0);
+	c_h =physics_joint_revolute_create(anchor_1, head, anchor_1.phy_position_x, anchor_1.phy_position_y, -1, 1, 1, 0 , 0, 0, 0);
 
 
 	tail.phy_position_x = anchor_2.phy_position_x - tail.sprite_width * 0.5;
 	tail.phy_position_y = anchor_2.phy_position_y;
 
-	physics_joint_revolute_create(anchor_2, tail, anchor_2.phy_position_x, anchor_2.phy_position_y, -1, 1, 1, 0 , 0, 0, 0);
+	c_t = physics_joint_revolute_create(anchor_2, tail, anchor_2.phy_position_x, anchor_2.phy_position_y, -1, 1, 1, 0 , 0, 0, 0);
 
 	anchor_1.rope_ready = true;
 	anchor_2.rope_ready = true;
