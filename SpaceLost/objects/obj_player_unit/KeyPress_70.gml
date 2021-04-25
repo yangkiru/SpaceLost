@@ -6,7 +6,13 @@ if (rope == -1 && distance_to_object(anchor) <= rope_length * 10) {
 	rope.anchor_1 = self;
 	rope.anchor_2 = anchor;
 	rope.init = true;
+	
+	anchor.control = true;
+	control = false;
 } else if (rope != -1) {
 	instance_destroy(rope);
 	rope = -1;
+	
+	anchor.control = false;
+	control = true;
 }

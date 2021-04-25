@@ -9,3 +9,6 @@ rope = -1;
 
 move_target = -1;
 grab = -1;
+
+control = true;
+move = true;

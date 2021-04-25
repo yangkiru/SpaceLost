@@ -1,3 +1,5 @@
+if !control return;
+
 hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 bInput = keyboard_check(vk_lshift);

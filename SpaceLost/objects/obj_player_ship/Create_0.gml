@@ -7,3 +7,5 @@ tSpd_const = real(bs[? "tSpd_const"]); // for big number
 hInput_last = 0;
 vInput_last = 0;
 rope_ready = false;
+
+control = false;
