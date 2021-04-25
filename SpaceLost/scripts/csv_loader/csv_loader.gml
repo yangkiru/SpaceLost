@@ -1,7 +1,7 @@
 // call function in room creation code
-function csv_loader(){
-	var file_grid = load_csv("data.csv");
-	global.data = ds_map_create();
+function csv_loader(directory){
+	var file_grid = load_csv(directory);
+	var data = ds_map_create();
 	var m = noone;
 
 	var hh = ds_grid_height(file_grid);
@@ -10,7 +10,7 @@ function csv_loader(){
 		var group = file_grid[# 1, i];
 		if (group != "") { // new group
 			m = ds_map_create();
-			ds_map_add_map(global.data, group, m);
+			ds_map_add_map(data, group, m);
 		}
 		var key = file_grid[# 2, i];
 		
@@ -18,8 +18,7 @@ function csv_loader(){
 
 		var value = file_grid[# 3, i];
 		
-		show_debug_message(key + " " + value);
-		
 		ds_map_add(m, key, value);
 	}
+	return data;
 }
