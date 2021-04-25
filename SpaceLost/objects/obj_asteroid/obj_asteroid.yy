@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "con_rotate",
-    "path": "objects/con_rotate/con_rotate.yy",
+    "name": "con_grabable",
+    "path": "objects/con_grabable/con_grabable.yy",
   },
   "physicsObject": true,
   "physicsSensor": false,
@@ -34,7 +34,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_block_rotate",
+  "name": "obj_asteroid",
   "tags": [],
   "resourceType": "GMObject",
 }
