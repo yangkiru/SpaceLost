@@ -6,3 +6,4 @@ rope_length = real(rope_length);
 rope_ready = false;
 rope = -1;
 
+move_target = -1;
