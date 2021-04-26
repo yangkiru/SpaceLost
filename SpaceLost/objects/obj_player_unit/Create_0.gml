@@ -6,6 +6,7 @@ mSpd_const = real(global.data[? "player"][? "mSpd_const"]);
 rope_length = real(rope_length);
 rope_ready = false;
 rope = -1;
+rope_rot = 0;
 
 move_target = -1;
 target_x = -1;
