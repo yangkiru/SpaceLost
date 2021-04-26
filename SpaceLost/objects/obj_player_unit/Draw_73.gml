@@ -4,6 +4,7 @@ show_debug_message(rope_rot_spd);
 var inner_radius = rope_length * 15;
 var thickness = 4;
 draw_set_color(c_lime);
+draw_set_alpha(rope_circle_alpha);
 
 var pattern = array_create_ext(1,2,0,0,0,0,0,0,0,2,-1,0);
 for (var j = 0; j <= 360; j++)
