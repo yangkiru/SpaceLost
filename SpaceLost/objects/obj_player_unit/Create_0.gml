@@ -8,6 +8,8 @@ rope_ready = false;
 rope = -1;
 
 move_target = -1;
+target_x = -1;
+target_y = -1;
 grab = -1;
 
 control = true;

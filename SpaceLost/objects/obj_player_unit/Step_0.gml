@@ -1,44 +1,70 @@
-if control {
+if control { // Player not connected
 
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	bInput = keyboard_check(vk_lshift);
+	
+	phy_linear_damping = 0.5;
 
 	if (hInput != 0 || vInput != 0) { // if got key
-		if !grab && sprite_index != spr_player_swim
+		if !grab && sprite_index != spr_player_swim { // swim
 			sprite_index = spr_player_swim;
-		else if grab && sprite_index != spr_player_swim_grab
+			image_index = 0;
+		}
+		else if grab && sprite_index != spr_player_swim_grab { // swim with grab
 			sprite_index = spr_player_swim_grab;
-			
-		if round(image_index) == 7 {
-			if move {
-				var sum = abs(hInput) + abs(vInput);
-				var spd = mSpd * mSpd_const;
-				if sum != 0
-					physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
-				move = false;
-			}
-		} else if image_index > image_number - 1 
-			move = true;
+			image_index = 0;
+		}
 	}
-	else if image_index > image_number -1
-		if sprite_index != spr_player_idle
-			sprite_index = spr_player_idle;
+	else if image_index > (image_number -1) { // end of sprite frame
+			if !grab && sprite_index != spr_player_idle // idle
+				sprite_index = spr_player_idle;
+			else if grab && sprite_index != spr_player_idle_grab // idle with grab
+				sprite_index = spr_player_idle_grab;
+			image_index = 0;
+	}
 }
-else {
-	if move_target == -1
-		return;
-
-	if instance_position(target_x, target_y, self) {
-		if sprite_index != spr_player_idle && grab == -1
+else { // Player connected
+	if move_target < 0 { // lost target
+		
+		if !grab && sprite_index != spr_player_idle { // idle
 			sprite_index = spr_player_idle;
-		move_target = -1;
+			image_index = 0;
+		} else if grab && sprite_index != spr_player_idle_grab { // idle with grab
+			sprite_index = spr_player_idle_grab;
+			image_index = 0;
+		}
+		if move_target == -2 {
+			phy_linear_damping = 3;
+			
+			var pd = point_direction(phy_position_x,phy_position_y,target_x,target_y);
+			var lx = lengthdir_x(1, pd);
+			var ly = lengthdir_y(1, pd);
+			var spd = mSpd * mSpd_const;
+			physics_apply_force(phy_position_x, phy_position_y, spd * lx, spd * ly);
+			
+			if point_distance(phy_position_x,phy_position_y,target_x,target_y) < 0.5 {
+				move_target = -1;
+				phy_speed_x = 0;
+				phy_speed_y = 0;
+			}
+		} else
+			phy_linear_damping = 0.5;
 		return;
 	}
-
-	if sprite_index != spr_player_swim && grab == -1
+	phy_linear_damping = 0.5;
+		
+	if !grab && sprite_index != spr_player_swim { // swim
 		sprite_index = spr_player_swim;
-	
-	physics_apply_force(phy_position_x,phy_position_y,-phy_speed_x*725,-phy_speed_y*725); //this code can make the physics object stop moving
-	physics_apply_force(phy_position_x,phy_position_y,lengthdir_x(mSpd * mSpd_const,point_direction(x,y,target_x,target_y)),lengthdir_y(mSpd * mSpd_const,point_direction(x,y,target_x,target_y)));
+		image_index = 0;
+	}
+	else if grab && sprite_index != spr_player_swim_grab { // swim with grab
+		sprite_index = spr_player_swim_grab;
+		image_index = 0;
+	}		
+
+	if instance_position(target_x, target_y, self) { // reach at point
+		move_target = -2; // target lost
+		return;
+	}
 }
