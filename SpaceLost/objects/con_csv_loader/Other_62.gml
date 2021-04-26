@@ -1,3 +1,9 @@
-global.data = csv_loader(fname);
+if getfile != 0 {
+	show_debug_message("load fail");
+	room_restart();	// load fail
+}
+else {
+	global.data = csv_loader(fname);
 
-room_goto_next();
+	room_goto_next();
+}
