@@ -17,3 +17,4 @@ for (var j = 0; j <= 360; j++)
 	if (pattern[j % array_length_1d(pattern)] == -1)
 		draw_primitive_end();
 }
+draw_set_alpha(1);

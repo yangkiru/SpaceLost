@@ -16,7 +16,6 @@
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},"order":0,},
     {"id":{"name":"obj_rope_create","path":"objects/obj_rope_create/obj_rope_create.yy",},"order":6,},
     {"id":{"name":"con_reset","path":"objects/con_reset/con_reset.yy",},"order":2,},
-    {"id":{"name":"obj_rope_start","path":"objects/obj_rope_start/obj_rope_start.yy",},"order":9,},
     {"id":{"name":"obj_player_unit","path":"objects/obj_player_unit/obj_player_unit.yy",},"order":2,},
     {"id":{"name":"con_grabable","path":"objects/con_grabable/con_grabable.yy",},"order":6,},
     {"id":{"name":"glowCircle","path":"sprites/glowCircle/glowCircle.yy",},"order":0,},
