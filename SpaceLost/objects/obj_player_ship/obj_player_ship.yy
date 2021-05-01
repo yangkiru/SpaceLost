@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite1",
-    "path": "sprites/Sprite1/Sprite1.yy",
+    "name": "spr_basic_ship",
+    "path": "sprites/spr_basic_ship/spr_basic_ship.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,8 +23,8 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":32.0,"y":32.0,},
-    {"x":32.0,"y":32.0,},
+    {"x":224.0,"y":231.0,},
+    {"x":224.0,"y":231.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
