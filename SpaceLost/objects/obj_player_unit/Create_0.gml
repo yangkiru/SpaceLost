@@ -1,5 +1,5 @@
 // @description Insert description here
-anchor = obj_player_ship;
+ship = obj_player_ship;
 rope_length = global.data[? "player"][? "rope_length"];
 mSpd = real(global.data[? "player"][? "mSpd"]);
 mSpd_const = real(global.data[? "player"][? "mSpd_const"]);
