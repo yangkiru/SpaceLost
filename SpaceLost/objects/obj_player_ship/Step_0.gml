@@ -16,3 +16,4 @@ if (hInput != 0 || vInput != 0) { // if got key
 }
 hInput_last = hInput;
 vInput_last = vInput;
+
