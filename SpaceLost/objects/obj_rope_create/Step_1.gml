@@ -57,14 +57,14 @@ if (!connected && anchor_1 != -1 && anchor_2 != -1) {
 	head.phy_position_y = anchor_1.phy_position_y;
 	
 
-	var j = physics_joint_revolute_create(anchor_1, head, head.phy_position_x, head.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
+	j_h = physics_joint_revolute_create(anchor_1, head, head.phy_position_x, head.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
 	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
 	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
 
 	tail.phy_position_x = anchor_2.phy_position_x - 16;
 	tail.phy_position_y = anchor_2.phy_position_y;
 
-	var j = physics_joint_revolute_create(anchor_2, tail, tail.phy_position_x + 16 , tail.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
+	j_t = physics_joint_revolute_create(anchor_2, tail, tail.phy_position_x + 16 , tail.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
 	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
 	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
 	

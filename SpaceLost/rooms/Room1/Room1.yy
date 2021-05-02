@@ -17,7 +17,6 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_player_ship","path":"objects/obj_player_ship/obj_player_ship.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":608.0,"y":288.0,"resourceVersion":"1.0","name":"inst_7E118B9A","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_player_unit","path":"objects/obj_player_unit/obj_player_unit.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":832.0,"y":256.0,"resourceVersion":"1.0","name":"inst_4B77B196","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_asteroid","path":"objects/obj_asteroid/obj_asteroid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1472.0,"y":736.0,"resourceVersion":"1.0","name":"i_base","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_asteroid","path":"objects/obj_asteroid/obj_asteroid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-32.0,"resourceVersion":"1.0","name":"inst_12955EF0","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_asteroid","path":"objects/obj_asteroid/obj_asteroid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-39.3382454,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":928.0,"resourceVersion":"1.0","name":"inst_2F9FED53","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_asteroid","path":"objects/obj_asteroid/obj_asteroid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-168.7314,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":256.0,"resourceVersion":"1.0","name":"inst_4B8B20B3","tags":[],"resourceType":"GMRInstance",},
@@ -35,7 +34,6 @@
   "instanceCreationOrder": [
     {"name":"inst_4B77B196","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_7E118B9A","path":"rooms/Room1/Room1.yy",},
-    {"name":"i_base","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_12955EF0","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_2F9FED53","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4B8B20B3","path":"rooms/Room1/Room1.yy",},

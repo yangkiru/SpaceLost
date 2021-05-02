@@ -67,3 +67,29 @@ else { // Player connected
 		return;
 	}
 }
+
+////Inputs
+
+//hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
+//vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
+
+//// Inits
+
+//phy_linear_damping = 0.5;
+
+//// State Machine
+//if (control) {
+//	switch (state) {
+//		case States.MoveStart :
+//			if (hInput != 0 || vInput != 0) { // if got key
+//				if !grab && sprite_index != spr_player_swim { // swim
+//					sprite_index = spr_player_swim;
+//					image_index = 0;
+//				}
+//		else if grab && sprite_index != spr_player_swim_grab { // swim with grab
+//			sprite_index = spr_player_swim_grab;
+//			image_index = 0;
+//		}
+//	}
+//	}
+//}

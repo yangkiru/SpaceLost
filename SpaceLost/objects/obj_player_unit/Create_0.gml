@@ -16,3 +16,9 @@ target_y = -1;
 grab = -1;
 
 control = true;
+
+state = noone;
+
+enum States {
+	MoveStart, MoveStop
+}
