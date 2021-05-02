@@ -23,8 +23,8 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":80.0,"y":77.0,},
-    {"x":80.0,"y":77.0,},
+    {"x":68.0,"y":74.0,},
+    {"x":68.0,"y":74.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},

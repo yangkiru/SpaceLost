@@ -7,7 +7,7 @@ if (init) {
 	// Create initial segments
 	obj1 = instance_create_depth(x, y, 0, obj_rope);
 	obj2 = instance_create_depth(x + xx, y, 0, obj_rope);
-	physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 1, 0, 0, 0, 0);
+	physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0, 0, 0, 0);
 
 	ds_list_add(l, obj1);
 	ds_list_add(l, obj2);
@@ -46,7 +46,7 @@ if (!connected && anchor_1 != -1 && anchor_2 != -1) {
 	head = l[| 0];
 	tail = l[| ds_list_size(l)-1];
 
-	head.phy_position_x = anchor_1.phy_position_x-8;
+	head.phy_position_x = anchor_1.phy_position_x;
 	head.phy_position_y = anchor_1.phy_position_y;
 	
 

@@ -9,10 +9,13 @@ if (rope == -1 && distance_to_object(ship) <= rope_length * 10) {
 	
 	ship.control = true;
 	control = false;
+	
+	con_camera.follow = ship;
 } else if (rope != -1) {
 	instance_destroy(rope);
 	rope = -1;
 	
 	ship.control = false;
 	control = true;
+	con_camera.follow = self;
 }
