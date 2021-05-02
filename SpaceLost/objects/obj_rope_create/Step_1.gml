@@ -1,16 +1,15 @@
+/// @description Create Rope
 if (init) {
 
 	l = ds_list_create();
 	length = image_xscale;
 	xx = 16;
-	var rf = 0;
 	// Create initial segments
 	obj1 = instance_create_depth(x, y, 0, obj_rope);
 	obj2 = instance_create_depth(x + xx, y, 0, obj_rope);
-	//var j = physics_joint_rope_create(obj1, obj2, obj2.x, obj2.y, obj1.x, obj1.y, 0, 0);
-	var j = physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0, 0, 0, 0);
-	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
-	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
+
+	physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0, 0, 0, 0);
+
 
 	ds_list_add(l, obj1);
 	ds_list_add(l, obj2);
@@ -26,9 +25,8 @@ if (init) {
 		// Move to next segment
 		obj1 = obj2;
 		obj2 = instance_create_depth(x + xx, y, 0, obj_rope);
-		var j = physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0 , 0, 0, 0);
-		//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
-		//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
+		physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0 , 0, 0, 0);
+
 		ds_list_add(l, obj2);
 		obj2.parent = obj1;
 	}
@@ -37,9 +35,8 @@ if (init) {
 
 	obj1 = obj2;
 	obj2 = instance_create_depth(x + xx, y, 0, obj_rope);
-	var j = physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0, 0, 0, 0);
-	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
-	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
+	physics_joint_revolute_create(obj1, obj2, obj2.x, obj2.y, -1, 1, 0, 0, 0, 0, 0);
+	
 	ds_list_add(l, obj2);
 	obj2.parent = obj1;
 	
@@ -56,18 +53,14 @@ if (!connected && anchor_1 != -1 && anchor_2 != -1) {
 	head.phy_position_x = anchor_1.phy_position_x;
 	head.phy_position_y = anchor_1.phy_position_y;
 	
-
+	// j_h, j_t use for cut the rope
 	j_h = physics_joint_revolute_create(anchor_1, head, head.phy_position_x, head.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
-	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
-	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
 
 	tail.phy_position_x = anchor_2.phy_position_x - 16;
 	tail.phy_position_y = anchor_2.phy_position_y;
 
 	j_t = physics_joint_revolute_create(anchor_2, tail, tail.phy_position_x + 16 , tail.phy_position_y, -1, 1, 0, 0 , 0, 0, 0);
-	//physics_joint_set_value(j, phy_joint_reaction_force_x, rf);
-	//physics_joint_set_value(j, phy_joint_reaction_force_y, rf);
-	
+
 	anchor_1.rope_ready = true;
 	anchor_2.rope_ready = true;
 

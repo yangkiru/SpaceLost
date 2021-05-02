@@ -10,15 +10,15 @@ rope_ready = false;
 rope = -1;
 rope_rot = 0;
 
-move_target = -1;
+move_target = noone;
 target_x = -1;
 target_y = -1;
 grab = -1;
 
 control = true;
 
-state = noone;
+state = States.Idle;
 
 enum States {
-	MoveStart, MoveStop
+	Idle, MoveStart, Moving, MoveStop
 }

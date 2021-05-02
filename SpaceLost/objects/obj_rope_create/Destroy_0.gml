@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Remove joint of head and tail
 
 physics_joint_delete(j_h);
 physics_joint_delete(j_t);
