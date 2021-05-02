@@ -11,3 +11,5 @@ vInput_last = 0;
 rope_ready = false;
 
 control = false;
+
+depth = 2;

@@ -22,3 +22,5 @@ state = States.Idle;
 enum States {
 	Idle, MoveStart, Moving, MoveStop
 }
+
+depth = 0;
