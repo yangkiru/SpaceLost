@@ -15,8 +15,8 @@
   "physicsSensor": false,
   "physicsShape": 1,
   "physicsGroup": 0,
-  "physicsDensity": 0.1,
-  "physicsRestitution": 0.1,
+  "physicsDensity": 10.0,
+  "physicsRestitution": 0.0,
   "physicsLinearDamping": 0.9,
   "physicsAngularDamping": 0.1,
   "physicsFriction": 0.2,
@@ -24,8 +24,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [
     {"x":0.0,"y":6.0,},
-    {"x":16.0,"y":6.0,},
-    {"x":16.0,"y":10.0,},
+    {"x":15.0,"y":6.0,},
+    {"x":15.0,"y":10.0,},
     {"x":0.0,"y":10.0,},
   ],
   "eventList": [
