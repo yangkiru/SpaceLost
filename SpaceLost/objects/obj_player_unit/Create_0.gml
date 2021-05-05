@@ -10,6 +10,7 @@ rope_circle_alpha = real(global.data[? "player"][? "rope_circle_alpha"]);
 rope = -1;
 rope_graphic = -1;
 rope_rot = 0;
+connected = noone;
 
 move_target = noone;
 target_x = -1;

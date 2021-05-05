@@ -5,6 +5,8 @@ if (rope == -1 && distance_to_object(ship) <= rope_length * 10) {
 	ship.control = true;
 	control = false;
 	
+	connected = ship;
+	
 	con_camera.follow = ship;
 	state = States.Idle;
 } else if (rope != -1) {
@@ -13,5 +15,6 @@ if (rope == -1 && distance_to_object(ship) <= rope_length * 10) {
 	
 	ship.control = false;
 	control = true;
+	connected = noone;
 	con_camera.follow = self;
 }
