@@ -18,10 +18,8 @@ if (control) {
 		case States.MoveStart : 
 			var targetSpr = grab ? spr_player_swim_grab : spr_player_swim;
 		
-			if (isKey){
 				target_spr(targetSpr);
 				state = States.Moving;
-			}
 			break;
 		case States.Moving :
 			if (!isKey) { // if didn't get key
@@ -33,7 +31,18 @@ if (control) {
 					target_spr(targetSpr);
 					state = States.Idle;
 				}
+			} else {
+				state = States.Turning;
 			}
+			break;
+		case States.Turning :
+			if (isKey) {
+				var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y-vInput) + 90; // get direction
+				var dd = angle_difference(phy_rotation, pd);
+				phy_rotation -= min(abs(dd), tSpd * tSpd_const) * sign(dd);
+				phy_angular_velocity = 0;
+				if (abs(dd) < 1) state = States.Moving;
+			} else state = States.Moving;
 			break;
 	}
 } else {

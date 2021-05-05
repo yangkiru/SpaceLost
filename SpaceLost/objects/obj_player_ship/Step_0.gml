@@ -6,8 +6,8 @@ bInput = keyboard_check(vk_lshift);
 	
 if (hInput != 0 || vInput != 0) { // if got key
 		
-	var pd = point_direction(x,y,x+hInput,y+vInput) + 90; // get direction
-	
+	//var pd = point_direction(x,y,x+hInput,y+vInput) + 90; // get direction
+	var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y+vInput) + 90; // get direction
 	var dd = angle_difference(phy_rotation, pd);
 	phy_rotation -= min(abs(dd), tSpd * tSpd_const * (bInput ? btSpd : 1)) * sign(dd);
 	phy_angular_velocity = 0;
