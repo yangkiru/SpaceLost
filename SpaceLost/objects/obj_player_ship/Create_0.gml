@@ -11,6 +11,7 @@ vInput = 0;
 bInput = 0;
 hInput_last = 0;
 vInput_last = 0;
+force_dir = 0;
 
 control = false;
 connected = noone;
