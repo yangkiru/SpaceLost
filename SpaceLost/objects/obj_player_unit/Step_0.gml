@@ -5,7 +5,7 @@ vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 
 // Inits
 
-phy_linear_damping = 0.5;
+// phy_linear_damping = 0.5;
 var isKey = hInput != 0 || vInput != 0;
 
 // State Machine
@@ -44,22 +44,24 @@ if (control) {
 			state = States.Moving;
 			break;
 		case States.Moving : 
-			if (instance_position(target_x, target_y, self)) { // reach at point
+			if collision_circle(phy_position_x, phy_position_y, 10, move_target, false, true){
 				state = States.MoveStop;
 			}
 			break;
 		case States.MoveStop : 
-			phy_linear_damping = 3;
+			//phy_linear_damping = 3;
 				
-			var pd = point_direction(phy_position_x,phy_position_y,target_x,target_y);
-			var lx = lengthdir_x(1, pd);
-			var ly = lengthdir_y(1, pd);
-			var spd = mSpd * mSpd_const;
+			//var pd = point_direction(phy_position_x,phy_position_y,target_x,target_y);
+			//var lx = lengthdir_x(1, pd);
+			//var ly = lengthdir_y(1, pd);
+			//var spd = mSpd * mSpd_const;
 				
-			physics_apply_force(phy_position_x, phy_position_y, spd * lx, spd * ly); // force to target
+			//physics_apply_force(phy_position_x, phy_position_y, spd * lx, spd * ly); // force to target
 			
-			if (point_distance(phy_position_x,phy_position_y,target_x,target_y) < 0.5) // if close then phy init
+			
+			//if (point_distance(phy_position_x,phy_position_y,target_x,target_y) < 0.5) // if close then phy init
 				state = States.Idle;
+			
 			break;
 		case States.Idle : 
 			if (isKey) {

@@ -32,6 +32,8 @@
     {"id":{"name":"object_get_depth","path":"scripts/object_get_depth/object_get_depth.yy",},"order":5,},
     {"id":{"name":"fnt_roading","path":"fonts/fnt_roading/fnt_roading.yy",},"order":0,},
     {"id":{"name":"csv_loader","path":"scripts/csv_loader/csv_loader.yy",},"order":1,},
+    {"id":{"name":"obj_miner","path":"objects/obj_miner/obj_miner.yy",},"order":7,},
+    {"id":{"name":"spr_miner","path":"sprites/spr_miner/spr_miner.yy",},"order":5,},
     {"id":{"name":"spr_asteroid_blue_small_1","path":"sprites/spr_asteroid_blue_small_1/spr_asteroid_blue_small_1.yy",},"order":0,},
     {"id":{"name":"spr_player_fly","path":"sprites/spr_player_fly/spr_player_fly.yy",},"order":4,},
     {"id":{"name":"Loading","path":"rooms/Loading/Loading.yy",},"order":1,},
