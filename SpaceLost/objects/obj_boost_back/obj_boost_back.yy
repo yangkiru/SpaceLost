@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_white_dust",
-    "path": "sprites/spr_white_dust/spr_white_dust.yy",
+    "name": "spr_basic_ship_boost_back",
+    "path": "sprites/spr_basic_ship_boost_back/spr_basic_ship_boost_back.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "con_boost",
+    "path": "objects/con_boost/con_boost.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_white_dust01",
+  "name": "obj_boost_back",
   "tags": [],
   "resourceType": "GMObject",
 }

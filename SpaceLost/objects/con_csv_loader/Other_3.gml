@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-if (held)
-	rot += 1;
+ds_map_destroy(global.data);
