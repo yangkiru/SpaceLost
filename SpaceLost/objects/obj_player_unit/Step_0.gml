@@ -8,6 +8,8 @@ vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 // phy_linear_damping = 0.5;
 var isKey = hInput != 0 || vInput != 0;
 
+image_speed = 1;
+
 // State Machine
 if (control) {
 	switch (state) {
@@ -72,9 +74,10 @@ if (control) {
 			
 			break;
 		case States.Idle : 
-			if (isKey) {
+			if (isKey && phy_speed > 5) {
 				var targetSpr = spr_player_fly;
 				target_spr(targetSpr);
+				image_speed = phy_speed * 0.05;
 			} else {
 				var targetSpr = grab ? spr_player_idle_grab : spr_player_idle;
 				target_spr(targetSpr);
