@@ -10,6 +10,7 @@ hInput_last = 0;
 vInput_last = 0;
 
 control = false;
+connected = noone;
 
 depth = 2;
 

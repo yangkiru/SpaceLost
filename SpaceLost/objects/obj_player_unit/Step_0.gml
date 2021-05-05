@@ -49,18 +49,17 @@ if (control) {
 			}
 			break;
 		case States.MoveStop : 
-			//phy_linear_damping = 3;
-				
-			//var pd = point_direction(phy_position_x,phy_position_y,target_x,target_y);
-			//var lx = lengthdir_x(1, pd);
-			//var ly = lengthdir_y(1, pd);
-			//var spd = mSpd * mSpd_const;
-				
-			//physics_apply_force(phy_position_x, phy_position_y, spd * lx, spd * ly); // force to target
-			
-			
-			//if (point_distance(phy_position_x,phy_position_y,target_x,target_y) < 0.5) // if close then phy init
+			if (t == 0) {
+				last_spd_x = phy_speed_x;
+				last_spd_y = phy_speed_y;
+			}
+			t += delta_time / 1000000;
+			phy_speed_x = lerp(last_spd_x, 0, min(1,t));
+			phy_speed_y = lerp(last_spd_y, 0, min(1,t));
+			if (t > 1) {
+				t = 0;
 				state = States.Idle;
+			}
 			
 			break;
 		case States.Idle : 

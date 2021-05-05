@@ -20,6 +20,7 @@ grab = -1;
 control = true;
 
 state = States.Idle;
+t = 0;
 
 enum States {
 	Idle, MoveStart, Moving, MoveStop
