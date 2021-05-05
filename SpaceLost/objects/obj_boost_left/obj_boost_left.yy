@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_basic_ship_boost_left",
-    "path": "sprites/spr_basic_ship_boost_left/spr_basic_ship_boost_left.yy",
+    "name": "spr_ship_boost_left",
+    "path": "sprites/spr_ship_boost_left/spr_ship_boost_left.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,6 +25,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

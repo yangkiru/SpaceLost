@@ -7,6 +7,9 @@ y = parent.y + _c * offsetY - _s * offsetX;
 
 image_angle = parent.image_angle;
 
+if (parent.bInput && image_alpha > 0.9)
+	image_alpha = 0;
+
 //if (parent.bInput)
 //	image_alpha = min(1, image_alpha + spd);
 //else

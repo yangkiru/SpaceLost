@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_basic_ship_boost_back",
-    "path": "sprites/spr_basic_ship_boost_back/spr_basic_ship_boost_back.yy",
+    "name": "spr_ship_boost_back",
+    "path": "sprites/spr_ship_boost_back/spr_ship_boost_back.yy",
   },
   "solid": false,
   "visible": true,
