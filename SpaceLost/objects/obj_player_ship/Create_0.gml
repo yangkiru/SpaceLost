@@ -8,7 +8,6 @@ btSpd = real(bs[? "btSpd"]);
 
 hInput_last = 0;
 vInput_last = 0;
-rope_ready = false;
 
 control = false;
 

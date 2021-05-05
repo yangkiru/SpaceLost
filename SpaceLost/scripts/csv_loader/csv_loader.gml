@@ -20,5 +20,6 @@ function csv_loader(directory){
 		
 		ds_map_add(m, key, value);
 	}
+	ds_grid_destroy(file_grid);
 	return data;
 }

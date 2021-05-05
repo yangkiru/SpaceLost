@@ -7,7 +7,6 @@ mSpd_const = real(global.data[? "player"][? "mSpd_const"]);
 rope_length = real(rope_length);
 rope_rot_spd = real(global.data[? "player"][? "rope_rot_spd"]);
 rope_circle_alpha = real(global.data[? "player"][? "rope_circle_alpha"]);
-rope_ready = false;
 rope = -1;
 rope_graphic = -1;
 rope_rot = 0;
@@ -26,3 +25,5 @@ enum States {
 }
 
 depth = 0;
+
+//dummy = instance_create(x, y, con_dummy);
