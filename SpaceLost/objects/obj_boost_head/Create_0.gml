@@ -4,5 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-spr_original = spr_empty;
-spr_boost = spr_ship_overdrive_head;
+spd = 0.01;
