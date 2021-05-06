@@ -5,3 +5,4 @@
 event_inherited();
 
 spd = 0.01;
+is_shoot_dust = false;

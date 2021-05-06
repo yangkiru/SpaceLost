@@ -10,8 +10,8 @@ image_angle = parent.image_angle;
 if (parent.bInput && image_alpha > 0.9)
 	image_alpha = 0;
 
-if (is_shoot_dust) {
-	
+if (is_shoot_dust && image_alpha >= 0.9) {
+	alarm[0] = irandom_range(1, 5);
 }
 
 // Copy and Edit this

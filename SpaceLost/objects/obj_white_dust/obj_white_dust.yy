@@ -31,7 +31,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_white_dust01",
+  "name": "obj_white_dust",
   "tags": [],
   "resourceType": "GMObject",
 }
