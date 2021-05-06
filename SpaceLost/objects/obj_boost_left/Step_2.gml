@@ -1,3 +1,7 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
 event_inherited();
 
 if (parent.force_dir > 1)
@@ -8,4 +12,4 @@ else
 if (parent.bInput) sprite_index = spr_boost;
 else sprite_index = spr_original;
 
-image_xscale = 0.5 + image_alpha * 0.5;
+image_yscale = 0.5 + image_alpha * 0.5;

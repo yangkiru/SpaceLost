@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_ship_boost_left",
-    "path": "sprites/spr_ship_boost_left/spr_ship_boost_left.yy",
+    "name": "spr_ship_overdrive_head",
+    "path": "sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boost_left",
+  "name": "obj_boost_head",
   "tags": [],
   "resourceType": "GMObject",
 }

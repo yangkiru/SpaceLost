@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_ship_boost_left",
-    "path": "sprites/spr_ship_boost_left/spr_ship_boost_left.yy",
+    "name": "spr_basic_ship_boost_left",
+    "path": "sprites/spr_basic_ship_boost_left/spr_basic_ship_boost_left.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "con_boost",
-    "path": "objects/con_boost/con_boost.yy",
+    "name": "obj_boost",
+    "path": "objects/obj_boost/obj_boost.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -23,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -34,7 +31,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boost_left",
+  "name": "obj_boost_right",
   "tags": [],
   "resourceType": "GMObject",
 }
