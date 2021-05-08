@@ -18,6 +18,8 @@ function __global_object_depths() {
 	global.__objectDepths[10] = 0; // obj_rope_root
 	global.__objectDepths[11] = 0; // obj_rope_seg
 	global.__objectDepths[12] = 0; // con_dummy
+	global.__objectDepths[13] = 10; // obj_white_dust
+	
 	
 
 
@@ -34,6 +36,7 @@ function __global_object_depths() {
 	global.__objectNames[10] = "obj_rope_root";
 	global.__objectNames[11] = "obj_rope_seg";
 	global.__objectNames[12] = "con_dummy";
+	global.__objectNames[13] = "obj_white_dust";
 
 
 	// create another array that has the correct entries

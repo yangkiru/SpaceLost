@@ -6,3 +6,6 @@ event_inherited();
 
 spr_original = spr_ship_boost_back;
 spr_boost = spr_ship_overdrive_back;
+
+dust_rangeX = sprite_width * 0.5;
+dust_rangeY = 0;

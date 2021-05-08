@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "con",
-    "path": "folders/Objects/con.yy",
+    "name": "Effect",
+    "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
   "name": "con_boost",

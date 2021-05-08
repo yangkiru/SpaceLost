@@ -9,3 +9,6 @@ spr_boost = spr_ship_overdrive_left;
 
 if (parent.bInput) sprite_index = spr_boost;
 else sprite_index = spr_original;
+
+dust_rangeX = 0;
+dust_rangeY = sprite_height * 0.5;
