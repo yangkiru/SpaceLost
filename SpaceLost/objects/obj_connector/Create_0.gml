@@ -9,9 +9,10 @@ function connect(target) {
 	connected = target;
 	if (target != noone) {
 		phy_position_x = target.phy_position_x;
-		phy_position_y = target.phy_position_y;
-	
-		joint = physics_joint_weld_create(self, target, phy_position_x, phy_position_y + offset, 0, 1, 1, 0);
+		phy_position_y = target.phy_position_y - offset;
+		phy_rotation = target.phy_rotation;
+		
+		joint = physics_joint_revolute_create(self, target, target.phy_position_x, target.phy_position_y, 0, 0, 0, 0, 0, 0, 0);
 	} else {
 		physics_joint_delete(joint);
 		joint = noone;

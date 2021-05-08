@@ -5,7 +5,7 @@
 event_inherited();
 
 if (parent.bInput && (parent.hInput != 0 || parent.vInput != 0))
-	image_alpha = min(parent.bInput ? 0.9 : 1, image_alpha + spd);
+	image_alpha = min(1, image_alpha + spd);
 else
 	image_alpha = max(0, image_alpha - spd);
 

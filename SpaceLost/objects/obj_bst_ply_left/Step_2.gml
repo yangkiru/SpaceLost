@@ -1,15 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Inherit the parent event
 event_inherited();
 
 if (parent.force_dir > 1)
-	image_alpha = min(parent.bInput ? 0.9 : 1, image_alpha + spd);
+	switch_overdrive();
 else
 	image_alpha = max(0, image_alpha - spd);
-	
-if (parent.bInput) sprite_index = spr_boost;
-else sprite_index = spr_original;
 
 image_yscale = 0.5 + image_alpha * 0.5;
