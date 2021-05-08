@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},"LayerId":{"name":"2cca52d7-9ff3-47c9-8c45-851f83b403bf","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ship_overdrive_head","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},"resourceVersion":"1.0","name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},"LayerId":{"name":"2cca52d7-9ff3-47c9-8c45-851f83b403bf","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_bst_ply_head_overdrive","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},"resourceVersion":"1.0","name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_ship_overdrive_head","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},
+    "spriteId": {"name":"spr_bst_ply_head_overdrive","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"aee1f2e3-5f44-493f-97d0-683dbfef98e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"aee1f2e3-5f44-493f-97d0-683dbfef98e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"354c28c7-1b4e-44f6-920f-4d0b27bd64f5","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_ship_overdrive_head","path":"sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",},
+    "parent": {"name":"spr_bst_ply_head_overdrive","path":"sprites/spr_bst_ply_head_overdrive/spr_bst_ply_head_overdrive.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_ship_overdrive_head",
+    "name": "spr_bst_ply_head_overdrive",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -69,11 +69,11 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Ship",
-    "path": "folders/Sprites/Ship.yy",
+    "name": "boost",
+    "path": "folders/Sprites/Ship/boost.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_ship_overdrive_head",
+  "name": "spr_bst_ply_head_overdrive",
   "tags": [],
   "resourceType": "GMSprite",
 }

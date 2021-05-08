@@ -3,7 +3,10 @@
 
 // Inherit the parent event
 event_inherited();
-depth = parent.depth - 1;
 
-spd = 0.01;
-is_shoot_dust = false;
+spr_original = spr_bst_ply_left;
+spr_boost = spr_bst_ply_left_overdrive;
+
+
+dust_rangeX = 0;
+dust_rangeY = sprite_height * 0.5;

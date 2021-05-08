@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_ship_boost_left",
-    "path": "sprites/spr_ship_boost_left/spr_ship_boost_left.yy",
+    "name": "spr_bst_ply_left",
+    "path": "sprites/spr_bst_ply_left/spr_bst_ply_left.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "con_boost",
-    "path": "objects/con_boost/con_boost.yy",
+    "name": "con_bst",
+    "path": "objects/con_bst/con_bst.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boost_left",
+  "name": "obj_bst_ply_left",
   "tags": [],
   "resourceType": "GMObject",
 }

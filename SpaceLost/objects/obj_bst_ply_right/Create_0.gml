@@ -4,8 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
-spr_original = spr_ship_boost_back;
-spr_boost = spr_ship_overdrive_back;
+spr_original = spr_bst_ply_right;
+spr_boost = spr_bst_ply_right_overdrive;s
 
-dust_rangeX = sprite_width * 0.5;
-dust_rangeY = 0;
+dust_rangeX = 0;
+dust_rangeY = sprite_height * 0.5;

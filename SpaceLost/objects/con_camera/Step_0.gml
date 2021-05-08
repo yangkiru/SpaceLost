@@ -13,7 +13,6 @@ if (current_zoom != target_zoom) {
 }
 
 current_zoom = lerp(current_zoom, target_zoom, t);
-show_debug_message(current_zoom);
 	
 
 x += (xTo - x)/25;

@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_ship_boost_back",
-    "path": "sprites/spr_ship_boost_back/spr_ship_boost_back.yy",
+    "name": "spr_bst_ply_right",
+    "path": "sprites/spr_bst_ply_right/spr_bst_ply_right.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "con_bst",
+    "path": "objects/con_bst/con_bst.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,7 +26,6 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -32,7 +34,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "con_boost",
+  "name": "obj_bst_ply_right",
   "tags": [],
   "resourceType": "GMObject",
 }

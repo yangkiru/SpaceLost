@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"18c2afd4-e527-4314-968f-0dfd46405650","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"18c2afd4-e527-4314-968f-0dfd46405650","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},"LayerId":{"name":"e5d3202c-86a7-4463-8876-f057a73d71c5","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_ship_overdrive_right","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},"resourceVersion":"1.0","name":"18c2afd4-e527-4314-968f-0dfd46405650","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"50db15cb-a050-475a-a426-f1e691d3620e","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"50db15cb-a050-475a-a426-f1e691d3620e","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"LayerId":{"name":"f2ac6a6b-b5d1-4e50-b690-e77a8274b3aa","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_bst_ply_left_overdrive","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"resourceVersion":"1.0","name":"50db15cb-a050-475a-a426-f1e691d3620e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_ship_overdrive_right","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},
+    "spriteId": {"name":"spr_bst_ply_left_overdrive","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"9f5cdfcb-90d5-4bd8-a555-92e71788bb7b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"18c2afd4-e527-4314-968f-0dfd46405650","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"75c39fdf-85dd-4b5e-a288-06a174b1ead3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"50db15cb-a050-475a-a426-f1e691d3620e","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,26 +54,26 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 2,
+    "xorigin": 439,
     "yorigin": 23,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_ship_overdrive_right","path":"sprites/spr_ship_overdrive_right/spr_ship_overdrive_right.yy",},
+    "parent": {"name":"spr_bst_ply_left_overdrive","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_ship_overdrive_right",
+    "name": "spr_bst_ply_left_overdrive",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e5d3202c-86a7-4463-8876-f057a73d71c5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f2ac6a6b-b5d1-4e50-b690-e77a8274b3aa","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Ship",
-    "path": "folders/Sprites/Ship.yy",
+    "name": "boost",
+    "path": "folders/Sprites/Ship/boost.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_ship_overdrive_right",
+  "name": "spr_bst_ply_left_overdrive",
   "tags": [],
   "resourceType": "GMSprite",
 }

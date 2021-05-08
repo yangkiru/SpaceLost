@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "spr_ship_overdrive_head",
-    "path": "sprites/spr_ship_overdrive_head/spr_ship_overdrive_head.yy",
+    "name": "enm_boost",
+    "path": "sprites/enm_boost/enm_boost.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "con_boost",
-    "path": "objects/con_boost/con_boost.yy",
+    "name": "con_bst",
+    "path": "objects/con_bst/con_bst.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -34,7 +34,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_boost_head",
+  "name": "obj_bst_em1_back",
   "tags": [],
   "resourceType": "GMObject",
 }
