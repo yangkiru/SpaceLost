@@ -1,6 +1,4 @@
 // @description Insert description here
-global.player_unit = self;
-ship = obj_player_ship;
 rope_length = global.data[? "player"][? "rope_length"];
 mSpd = real(global.data[? "player"][? "mSpd"]);
 mSpd_const = real(global.data[? "player"][? "mSpd_const"]);
@@ -10,7 +8,6 @@ rope_length = real(rope_length);
 rope_rot_spd = real(global.data[? "player"][? "rope_rot_spd"]);
 rope_circle_alpha = real(global.data[? "player"][? "rope_circle_alpha"]);
 rope = -1;
-rope_graphic = -1;
 rope_rot = 0;
 connected = noone;
 
@@ -25,11 +22,6 @@ camera_zoom = 1;
 state = States.Idle;
 t = 0;
 
-enum States {
-	Idle, MoveStart, Moving, MoveStop, Turning
-}
-
-depth = 0;
 connector = obj_connector;
 
 function target_spr(spr) {

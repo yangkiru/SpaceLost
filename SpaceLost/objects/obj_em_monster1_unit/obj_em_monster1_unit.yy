@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "em_face_warai",
-    "path": "sprites/em_face_warai/em_face_warai.yy",
+    "name": "spr_em_face",
+    "path": "sprites/spr_em_face/spr_em_face.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,6 +28,8 @@
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"con_static_parent","path":"objects/con_static_parent/con_static_parent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -36,7 +38,7 @@
     "path": "folders/Objects/Unit/Enemy.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_em_monster_1_unit",
+  "name": "obj_em_monster1_unit",
   "tags": [],
   "resourceType": "GMObject",
 }

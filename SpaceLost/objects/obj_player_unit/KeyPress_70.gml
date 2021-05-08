@@ -8,7 +8,7 @@ if (control == self) {
 		closet_ship.control = self;
 		control = closet_ship;
 		con_camera.follow = closet_ship;
-		state = States.Idle;
+		state = PlayerUnitStates.Idle;
 	}
 } else {
 	physics_joint_delete(rope);
