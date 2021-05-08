@@ -14,7 +14,7 @@ function shoot_dust(dust) {
 
 repeat(2) {
 	if ds_stack_empty(obj_dust_pool.pool) {
-	    var dust = instance_create(x,y, obj_dust);
+	    var dust = instance_create_layer(x,y, "Instances", obj_dust);
 		shoot_dust(dust);
 	}
 	else {

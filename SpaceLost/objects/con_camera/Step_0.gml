@@ -45,7 +45,6 @@ var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(view_camera[0], vm);
 
 if(shake){
-	show_debug_message(string(shakeDur) + " " + string(shakeForce));
     shakeDur --;
     x += choose(-shakeForce,shakeForce);
     y += choose(-shakeForce,shakeForce);

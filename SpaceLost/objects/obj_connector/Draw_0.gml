@@ -1,2 +1,2 @@
-if (follower.connected != noone)
+if (parent.connected != noone)
 	draw_self();
