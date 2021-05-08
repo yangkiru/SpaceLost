@@ -30,7 +30,7 @@
     "path": "folders/Objects/Effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_white_dust_pool",
+  "name": "obj_dust_pool",
   "tags": [],
   "resourceType": "GMObject",
 }

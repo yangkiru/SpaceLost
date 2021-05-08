@@ -1,5 +1,6 @@
 if (init) {
-	size = random_range(0.5, 0.7);
+	//white 0.1 ~ 0.3 gray 0.2 ~ 0.5
+	size = sprite_index == spr_white_dust ? random_range(0.1, 0.3) : random_range(0.3, 0.6);
 	image_xscale = size;
 	image_yscale = size;
 	image_alpha = 1;
@@ -13,6 +14,6 @@ x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
 
 if (image_xscale <= 0) { 
-	ds_stack_push(obj_white_dust_pool.pool, self);
+	ds_stack_push(obj_dust_pool.pool, self);
 	instance_deactivate_object(self);
 }
