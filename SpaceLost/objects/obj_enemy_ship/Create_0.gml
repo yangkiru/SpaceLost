@@ -1,2 +1,2 @@
-ship_data = global.data[? "basic_ship"];
+ship_data = global.data[? "monster_ship_1"];
 event_inherited();
