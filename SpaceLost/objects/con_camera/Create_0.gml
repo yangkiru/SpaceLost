@@ -37,3 +37,10 @@ window_set_position(monitorWidth/2-windowWidth/2, monitorHeight/2-windowHeight/2
 
 t = 1;
 lastControl = obj_player_unit.control;
+
+
+// Shake
+
+shake = false;
+shakeDur = 0;
+shakeForce = 0;

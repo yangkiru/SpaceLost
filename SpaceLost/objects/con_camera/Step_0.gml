@@ -30,6 +30,31 @@ if (follow != noone) {
 	yTo = follow.y;
 }
 
+// Shake
+
+/// approach
+function approach(_start, _end, _shift) {
+	if(_start < _end){
+	    return min(_start + _shift, _end); 
+	}else{
+	    return max(_start - _shift, _end);
+	}
+}
+
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 camera_set_view_mat(view_camera[0], vm);
 
+if(shake){
+	show_debug_message(string(shakeDur) + " " + string(shakeForce));
+    shakeDur --;
+    x += choose(-shakeForce,shakeForce);
+    y += choose(-shakeForce,shakeForce);
+    if(shakeDur <= 0){
+        shake = false;
+        shakeDur = 5;
+		shakeForce = 0;
+    }
+}else{
+    x = approach(x,0,0.3);
+    y = approach(y,0,0.3);
+}
