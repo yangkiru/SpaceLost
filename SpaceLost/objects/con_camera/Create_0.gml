@@ -15,15 +15,13 @@ yTo = y;
 x = follow.x;
 y = follow.y;
 
-minSizeW = 1280 * 2;
-maxSizeW = minSizeW*2.5;
-minSizeH = 720 * 2;
-maxSizeH = minSizeH*2.5;
+originW = 2560;
+originH = 1440;
 
 //Camera
 camSpeed = 0.2;
-camWidth = minSizeW;
-camHeight = minSizeH;
+camWidth = originW;
+camHeight = originH;
 camera_set_view_size(view_camera[0],camWidth,camHeight);
 camera_set_view_border(view_camera[0],camWidth,camHeight);
 //Window
@@ -36,7 +34,8 @@ monitorHeight = display_get_height();
 window_set_position(monitorWidth/2-windowWidth/2, monitorHeight/2-windowHeight/2);
 
 t = 1;
-lastControl = obj_player_unit.control;
+lastFollow = obj_player_unit;
+current_zoom = 1;
 
 
 // Shake

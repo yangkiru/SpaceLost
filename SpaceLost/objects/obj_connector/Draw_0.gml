@@ -1,2 +1,4 @@
-if (parent.connected != noone)
+if (connected != noone) {
+	depth = connected.depth - 1;
 	draw_self();
+}

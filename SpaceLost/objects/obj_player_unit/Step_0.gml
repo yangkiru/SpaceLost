@@ -11,7 +11,7 @@ var isKey = hInput != 0 || vInput != 0;
 image_speed = 1;
 
 // State Machine
-if (control) {
+if (control == self) {
 	switch (state) {
 		case States.Idle :
 			if (isKey)
@@ -84,11 +84,4 @@ if (control) {
 			}
 			break;
 		}
-}
-
-function target_spr(spr) {
-	if (sprite_index != spr) {
-		sprite_index = spr;
-		image_index = 0;
-	}
 }

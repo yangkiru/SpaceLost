@@ -19,7 +19,8 @@ target_x = -1;
 target_y = -1;
 grab = -1;
 
-control = true;
+control = self;
+camera_zoom = 1;
 
 state = States.Idle;
 t = 0;
@@ -29,5 +30,11 @@ enum States {
 }
 
 depth = 0;
+connector = obj_connector;
 
-//dummy = instance_create(x, y, con_dummy);
+function target_spr(spr) {
+	if (sprite_index != spr) {
+		sprite_index = spr;
+		image_index = 0;
+	}
+}

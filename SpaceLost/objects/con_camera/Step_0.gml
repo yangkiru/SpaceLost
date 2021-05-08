@@ -1,25 +1,19 @@
-if (obj_player_unit.control != lastControl) {
+if (follow != lastFollow) {
 	t = 0;
 }
-lastControl = obj_player_unit.control;
+lastFollow = follow;
 t = min(1, t + delta_time / 1000000 * camSpeed);
 
-if (!obj_player_unit.control) {
-	if (camWidth < maxSizeW) {
-		camWidth = lerp(camWidth, maxSizeW, t);
-		camHeight = lerp(camHeight, maxSizeH, t);
-		camera_set_view_size(view_camera[0],camWidth,camHeight);
-		camera_set_view_border(view_camera[0],camWidth,camHeight);
-	}
-} else { 
-	if (camWidth > minSizeW) {
-		camWidth = lerp(camWidth, minSizeW, t);
-		camHeight = lerp(camHeight, minSizeH, t);
-		camera_set_view_size(view_camera[0],camWidth,camHeight);
-		camera_set_view_border(view_camera[0],camWidth,camHeight);
-	}
+target_zoom = follow.camera_zoom;
+if (current_zoom != target_zoom) {
+	camWidth = lerp(camWidth, originW * target_zoom, t);
+	camHeight = lerp(camHeight, originH * target_zoom, t);
+	camera_set_view_size(view_camera[0],camWidth,camHeight);
+	camera_set_view_border(view_camera[0],camWidth,camHeight);
 }
-	
+
+current_zoom = lerp(current_zoom, target_zoom, t);
+show_debug_message(current_zoom);
 	
 
 x += (xTo - x)/25;

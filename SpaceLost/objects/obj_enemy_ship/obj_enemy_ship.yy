@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_basic_ship",
-    "path": "sprites/spr_basic_ship/spr_basic_ship.yy",
+    "name": "ecm_ship_idle_028",
+    "path": "sprites/ecm_ship_idle_028/ecm_ship_idle_028.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,8 +23,8 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":225.0,"y":225.0,},
-    {"x":225.0,"y":225.0,},
+    {"x":124.0,"y":138.0,},
+    {"x":124.0,"y":138.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
@@ -36,7 +36,7 @@
     "path": "folders/Objects/Ship.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player_ship",
+  "name": "obj_enemy_ship",
   "tags": [],
   "resourceType": "GMObject",
 }

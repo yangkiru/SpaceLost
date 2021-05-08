@@ -1,4 +1,4 @@
-if (connected == noone) {
+if (control == self) {
 	rope_rot = rope_rot > 360 ? rope_rot - 360 + rope_rot_spd : rope_rot + rope_rot_spd;
 	var inner_radius = rope_length * 15;
 	var thickness = 4;
