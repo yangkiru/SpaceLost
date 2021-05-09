@@ -88,6 +88,10 @@ function movement() {
 	}
 }
 
+function enemy_input() {}
+
+function enemy_movement() {}
+
 enum States {
 	Idle, MoveStart, Moving, MoveStop, Turning, Chasing, Running
 }

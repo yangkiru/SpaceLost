@@ -6,28 +6,7 @@ if (owner == obj_player_unit) {
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
 } else if (parent == con_em_unit && control == object_index) {
-	switch (state) {
-		case States.MoveStop :
-			lInput = 0;
-			break;
-		case States.Idle : // First, Get ride on ship
-			if (control == object_index) {
-				if (closet_ship != noone) {
-					if (distance_to_object(closet_ship) >= (rope_length * rope_length_const)) {
-						move_target = closet_ship;
-						state = States.Turning;
-					} else state = States.MoveStop;
-				}
-			}
-		default :
-			if (control == object_index) {
-				if (move_target != noone) {
-					var dir = point_direction(x, y, move_target.x, move_target.y);
-					hInput = lengthdir_x(1, dir);
-					vInput = lengthdir_y(1, dir);
-				}
-			}
-	}
+		enemy_input();
 } else {
 	hInput = 0;
 	vInput = 0;
@@ -64,15 +43,7 @@ if (control == owner) {
 					state = States.Turning;
 				}
 			} else if (parent == con_em_unit) { // Enemy
-				if collision_circle(phy_position_x, phy_position_y, rope_length * rope_length_const, move_target, false, true) {
-					state = States.MoveStop;
-					alarm[0] = 0;
-					break;
-				}
-				if (move_target != noone && parent == con_em_unit && alarm[0] < 1) { // movement alarm
-					alarm[0] = 90;
-				}
-				
+				enemy_movement();
 			}
 			break;
 		case States.Turning :
@@ -88,7 +59,7 @@ if (control == owner) {
 			break;
 		case States.MoveStop : 
 			if (parent == con_em_unit) {
-				lInput = 1;
+				lInput = 1; // 로프 연결
 			}
 	}
 } else {
