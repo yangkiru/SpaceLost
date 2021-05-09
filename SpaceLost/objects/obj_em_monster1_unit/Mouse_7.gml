@@ -1,0 +1,1 @@
+control = control == obj_player_unit ? obj_player_uit : object_index;

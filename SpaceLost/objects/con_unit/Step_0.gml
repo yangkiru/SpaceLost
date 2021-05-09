@@ -3,11 +3,12 @@ if (owner == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
-} else if (owner == con_em_unit) {
-	show_debug_message("It's enemy");
+} else if (parent == con_em_unit) {
 	switch (state) {
-		case States.Idle :
-			
+		case States.Idle : // First, Get ride on ship
+			if (control == object_index) {
+				lInput = 1;
+			} else lInput = 0;
 	}
 } else {
 	hInput = 0;
