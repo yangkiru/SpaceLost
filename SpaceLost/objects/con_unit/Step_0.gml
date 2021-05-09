@@ -1,36 +1,44 @@
 //Inputs
-
-hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
-vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
+if (owner == obj_player_unit) {
+	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
+	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
+	lInput = keyboard_check_released(ord("F"));
+} else if (owner == con_em_unit) {
+	show_debug_message("It's enemy");
+	switch (state) {
+		case States.Idle :
+			
+	}
+} else {
+	hInput = 0;
+	vInput = 0;
+	lInput = 0;
+}
 
 // Inits
 
 // phy_linear_damping = 0.5;
 var isKey = hInput != 0 || vInput != 0;
 
-image_speed = 1;
+image_speed = image_speed == 0 ? image_speed : 1;
 
 // State Machine
-if (control == self) {
+if (control == owner) {
 	switch (state) {
 		case States.Idle :
 			if (isKey)
 				state = States.MoveStart;
 			break;
-		case States.MoveStart : 
-			var targetSpr = grab ? spr_player_swim_grab : spr_player_swim;
-		
-				target_spr(targetSpr);
+		case States.MoveStart : 	
+				target_spr(grab ? spr_swim_grab : spr_swim);
 				state = States.Moving;
 			break;
 		case States.Moving :
-			if (!isKey) { // if didn't get key
-				targetSpr = grab ? spr_player_idle_grab : spr_player_idle;
-				
+			if (!isKey) { // if didn't get key		
 				var isEndOfFrame = image_index > (image_number -1);
 			
 				if (isEndOfFrame) {
-					target_spr(targetSpr);
+					target_spr(grab ? spr_idle_grab : spr_idle);
 					state = States.Idle;
 				}
 			} else {
@@ -50,8 +58,7 @@ if (control == self) {
 } else {
 	switch (state) {
 		case States.MoveStart :
-			var targetSpr = grab ? spr_player_swim_grab : spr_player_swim;
-			target_spr(targetSpr);
+			target_spr(grab ? spr_swim_grab : spr_swim);
 			state = States.Moving;
 			break;
 		case States.Moving : 
@@ -74,14 +81,17 @@ if (control == self) {
 			
 			break;
 		case States.Idle : 
-			if (isKey && phy_speed > 5) {
-				var targetSpr = spr_player_fly;
-				target_spr(targetSpr);
+			if (phy_speed > 5) {
+				target_spr(spr_fly);
 				image_speed = phy_speed * 0.05;
 			} else {
-				var targetSpr = grab ? spr_player_idle_grab : spr_player_idle;
-				target_spr(targetSpr);
+				target_spr(grab ? spr_idle_grab : spr_idle);
 			}
 			break;
 		}
+}
+
+// Connect
+if (lInput) {
+	connect_rope();
 }

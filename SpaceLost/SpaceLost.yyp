@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"con_em_unit","path":"objects/con_em_unit/con_em_unit.yy",},"order":4,},
     {"id":{"name":"obj_enemy_ship","path":"objects/obj_enemy_ship/obj_enemy_ship.yy",},"order":2,},
     {"id":{"name":"spr_em_face","path":"sprites/spr_em_face/spr_em_face.yy",},"order":0,},
     {"id":{"name":"Script7","path":"scripts/Script7/Script7.yy",},"order":0,},

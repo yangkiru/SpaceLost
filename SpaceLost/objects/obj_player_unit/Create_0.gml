@@ -1,32 +1,13 @@
-// @description Insert description here
-rope_length = global.data[? "player"][? "rope_length"];
-mSpd = real(global.data[? "player"][? "mSpd"]);
-mSpd_const = real(global.data[? "player"][? "mSpd_const"]);
-tSpd = real(global.data[? "player"][? "tSpd"]);
-tSpd_const = real(global.data[? "player"][? "tSpd_const"]);
-rope_length = real(rope_length);
-rope_rot_spd = real(global.data[? "player"][? "rope_rot_spd"]);
-rope_circle_alpha = real(global.data[? "player"][? "rope_circle_alpha"]);
-rope = -1;
-rope_rot = 0;
-connected = noone;
+unit_data = global.data[? "player"];
+event_inherited();
+tSpd = real(unit_data[? "tSpd"]);
+tSpd_const = real(unit_data[? "tSpd_const"]);
+rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
+rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
+connector = instance_create_layer(x, y, "Instances", obj_connector);
 
-move_target = noone;
-target_x = -1;
-target_y = -1;
-grab = -1;
-
-control = self;
-camera_zoom = 1;
-
-state = States.Idle;
-t = 0;
-
-connector = obj_connector;
-
-function target_spr(spr) {
-	if (sprite_index != spr) {
-		sprite_index = spr;
-		image_index = 0;
-	}
-}
+spr_idle = spr_player_idle;
+spr_idle_grab = spr_player_idle_grab;
+spr_swim = spr_player_swim;
+spr_swim_grab = spr_player_swim_grab;
+spr_fly = spr_player_fly;

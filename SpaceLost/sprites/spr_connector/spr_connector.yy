@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 23,
-    "yorigin": 68,
+    "yorigin": 66,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_connector","path":"sprites/spr_connector/spr_connector.yy",},
