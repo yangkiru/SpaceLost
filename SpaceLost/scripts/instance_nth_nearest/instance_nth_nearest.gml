@@ -11,3 +11,19 @@ function instance_nth_nearest(pointx, pointy, object, n){
 	    ds_priority_destroy(list);
 	    return nearest;
 }
+
+function instance_empty_ship_nearest(pointx, pointy, object, n){
+	var list,nearest;
+
+	    n = min(max(1,n),instance_number(object));
+	    list = ds_priority_create();
+	    nearest = noone;
+	    with (object) {
+			if (control == noone) {
+				ds_priority_add(list,id,distance_to_point(pointx,pointy));
+			}
+		}
+	    repeat (n) nearest = ds_priority_delete_min(list);
+	    ds_priority_destroy(list);
+	    return nearest;
+}

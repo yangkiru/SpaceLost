@@ -1,14 +1,32 @@
+closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);//instance_nth_nearest(x, y, con_ship, 1);
+
 //Inputs
 if (owner == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
-} else if (parent == con_em_unit) {
+} else if (parent == con_em_unit && control == object_index) {
 	switch (state) {
+		case States.MoveStop :
+			lInput = 0;
+			break;
 		case States.Idle : // First, Get ride on ship
 			if (control == object_index) {
-				lInput = 1;
-			} else lInput = 0;
+				if (closet_ship != noone) {
+					if (distance_to_object(closet_ship) >= (rope_length * rope_length_const)) {
+						move_target = closet_ship;
+						state = States.Turning;
+					} else state = States.MoveStop;
+				}
+			}
+		default :
+			if (control == object_index) {
+				if (move_target != noone) {
+					var dir = point_direction(x, y, move_target.x, move_target.y);
+					hInput = lengthdir_x(1, dir);
+					vInput = lengthdir_y(1, dir);
+				}
+			}
 	}
 } else {
 	hInput = 0;
@@ -18,7 +36,6 @@ if (owner == obj_player_unit) {
 
 // Inits
 
-// phy_linear_damping = 0.5;
 var isKey = hInput != 0 || vInput != 0;
 
 image_speed = image_speed == 0 ? image_speed : 1;
@@ -35,15 +52,27 @@ if (control == owner) {
 				state = States.Moving;
 			break;
 		case States.Moving :
-			if (!isKey) { // if didn't get key		
-				var isEndOfFrame = image_index > (image_number -1);
+			if (owner == obj_player_unit) { // Player
+				if (!isKey) { // if didn't get key		
+					var isEndOfFrame = image_index > (image_number -1);
 			
-				if (isEndOfFrame) {
-					target_spr(grab ? spr_idle_grab : spr_idle);
-					state = States.Idle;
+					if (isEndOfFrame) {
+						target_spr(grab ? spr_idle_grab : spr_idle);
+						state = States.Idle;
+					}
+				} else {
+					state = States.Turning;
 				}
-			} else {
-				state = States.Turning;
+			} else if (parent == con_em_unit) { // Enemy
+				if collision_circle(phy_position_x, phy_position_y, rope_length * rope_length_const, move_target, false, true) {
+					state = States.MoveStop;
+					alarm[0] = 0;
+					break;
+				}
+				if (move_target != noone && parent == con_em_unit && alarm[0] < 1) { // movement alarm
+					alarm[0] = 90;
+				}
+				
 			}
 			break;
 		case States.Turning :
@@ -53,8 +82,14 @@ if (control == owner) {
 				phy_rotation -= min(abs(dd), tSpd * tSpd_const) * sign(dd);
 				phy_angular_velocity = 0;
 				if (abs(dd) < 1) state = States.Moving;
-			} else state = States.Moving;
+			} else {
+				state = States.Moving;
+			}
 			break;
+		case States.MoveStop : 
+			if (parent == con_em_unit) {
+				lInput = 1;
+			}
 	}
 } else {
 	switch (state) {

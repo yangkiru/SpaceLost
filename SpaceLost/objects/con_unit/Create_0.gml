@@ -1,15 +1,18 @@
 // unit_data = global.data[? "unit_name"];
+rope_length_const = 10;
 rope_length = real(unit_data[? "rope_length"]);
 mSpd = real(unit_data[? "mSpd"]);
 mSpd_const = real(unit_data[? "mSpd_const"]);
+tSpd = real(unit_data[? "tSpd"]);
+tSpd_const = real(unit_data[? "tSpd_const"]);
+rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
+rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
 
 rope = noone;
 rope_rot = 0;
 connector = noone;
 
 move_target = noone;
-target_x = -1;
-target_y = -1;
 grab = -1;
 
 hInput = 0;
@@ -20,6 +23,7 @@ control = object_index; // This object control it
 owner = object_index; // Who control this
 parent = object_get_parent(object_index);
 camera_zoom = 1;
+closet_ship = noone;
 
 t = 0;
 
@@ -39,9 +43,9 @@ function target_spr(spr) {
 }
 
 function connect_rope() {
+	show_debug_message("rope");
 	if (control == object_index) {
-		var closet_ship = instance_nth_nearest(x, y, con_ship, 1);
-		if (closet_ship.control == noone && distance_to_object(closet_ship) <= rope_length * 10) {
+		if (closet_ship.control == noone && distance_to_object(closet_ship) <= rope_length * rope_length_const) {
 			if (connector != noone)
 				connector.connect(closet_ship, object_index, rope_length);
 			else {
@@ -52,7 +56,8 @@ function connect_rope() {
 			if (owner == obj_player_unit)
 				con_camera.follow = closet_ship;
 			state = States.Idle;
-		}
+			return closet_ship;
+		} else return noone;
 	} else {
 		//physics_joint_delete(rope);
 		if (connector != noone)
@@ -73,7 +78,7 @@ function movement() {
 		if sum != 0
 		physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
 	} else { // Contorl ship
-		var pd = point_direction(phy_position_x,phy_position_y,target_x,target_y);
+		var pd = point_direction(phy_position_x,phy_position_y,move_target.x,move_target.y);
 		var spd = mSpd * mSpd_const;
 		var lx = lengthdir_x(1, pd);
 		var ly = lengthdir_y(1, pd);
@@ -81,4 +86,8 @@ function movement() {
 					
 		physics_apply_impulse(phy_position_x,phy_position_y,spd * lx / sum, spd * ly / sum);
 	}
+}
+
+enum States {
+	Idle, MoveStart, Moving, MoveStop, Turning, Chasing, Running
 }

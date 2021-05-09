@@ -1,6 +1,7 @@
+//show_debug_message(string(object_get_name(object_index)) + "'s control is " + string(control == noone ? "noone" : object_get_name(control.object_index)));
 if control != noone {
 	// Player Input
-	if (control.object_index == obj_player_unit) {
+	if (control == obj_player_unit) {
 		hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 		vInput = keyboard_check(vk_up) - keyboard_check(vk_down); // up down arrows
 		bInput = keyboard_check(vk_lshift);
@@ -15,8 +16,8 @@ if control != noone {
 				con_camera.shakeForce = 3;
 				con_camera.shakeDur = 5;
 		}
-	} else {
-		// Enemy Input
+	} else { // Enemy Input
+		
 	}
 	
 	// Move Ship
