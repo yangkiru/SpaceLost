@@ -8,7 +8,11 @@ mPeriod = real(unit_data[? "mPeriod"]);
 function enemy_input() {
 	switch (state) {
 		case States.MoveStop :
+			move_target = noone;
+			hInput = 0;
+			vInput = 0;
 			lInput = 0;
+			state = States.Idle;
 			break;
 		case States.Idle : // First, Get ride on ship
 			if (control == object_index) {
@@ -31,10 +35,15 @@ function enemy_input() {
 }
 
 function enemy_movement() {
-	if collision_circle(phy_position_x, phy_position_y, rope_length * rope_length_const, move_target, false, true) {
+	if (move_target == noone || collision_circle(phy_position_x, phy_position_y, rope_length * rope_length_const, move_target, false, true)) {
 		state = States.MoveStop;
-		alarm[0] = 0;
-	} else if (move_target != noone && parent == con_em_unit && alarm[0] < 1) { // movement alarm
-		alarm[0] = round(mPeriod * 60);
+		if (move_target != noone && object_get_parent(move_target.object_index) == con_ship)
+			lInput = 1;
+	} else if (move_target != noone && parent == con_em_unit && !in_sequence) { // movement alarm
+		var _seq = layer_sequence_create("Instances", x, y, seq_em_movement);
+		var _seq_inst = layer_sequence_get_instance(_seq);
+		sequence_instance_override_object(_seq_inst, con_em_unit, self);
+		layer_sequence_speedscale(_seq, 0.8);
+		state = States.Turning;
 	}
 }

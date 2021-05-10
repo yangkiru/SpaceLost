@@ -125,7 +125,7 @@
     "volume": 1.0,
     "length": 30.0,
     "events": {"Keyframes":[
-        {"id":"e5643da2-e938-43c7-b771-94a1bdcffc40","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+        {"id":"6d2108bf-ccf1-4a74-96ff-9f9978374686","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
                 "move",
               ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
       ],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},

@@ -78,6 +78,10 @@ function movement() {
 		if sum != 0
 		physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
 	} else { // Contorl ship
+		if (move_target == noone) {
+			state = States.MoveStop;
+			return;
+		}
 		var pd = point_direction(phy_position_x,phy_position_y,move_target.x,move_target.y);
 		var spd = mSpd * mSpd_const;
 		var lx = lengthdir_x(1, pd);

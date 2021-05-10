@@ -57,10 +57,6 @@ if (control == owner) {
 				state = States.Moving;
 			}
 			break;
-		case States.MoveStop : 
-			if (parent == con_em_unit) {
-				lInput = 1; // 로프 연결
-			}
 	}
 } else {
 	switch (state) {
@@ -101,4 +97,5 @@ if (control == owner) {
 // Connect
 if (lInput) {
 	connect_rope();
+	lInput = 0;
 }
