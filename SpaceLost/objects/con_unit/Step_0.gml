@@ -9,8 +9,6 @@ if (owner == obj_player_unit) {
 		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
 		closet_ship_dist = get_distance(closet_ship, self, true)
 	}
-	show_debug_message(hInput);
-	show_debug_message(vInput);
 } else if (parent == con_em_unit && control == object_index) {
 		enemy_input();
 } else {

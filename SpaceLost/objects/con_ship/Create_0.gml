@@ -13,7 +13,8 @@ hInput = 0;
 vInput = 0;
 bInput = 0;
 force_dir = 0;
-control = noone;
+owner = noone;
 camera_zoom = 2;
+target = noone;
 
 depth = ObjectDepth.Ship;

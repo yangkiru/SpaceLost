@@ -9,3 +9,13 @@ function get_distance(a, b, is_sqrt){
 	else
 		return _add
 }
+
+function get_distance_point(x1, y1, x2, y2, is_sqrt){
+	var _xd = x2 - x1;
+	var _yd = y2 - y1;
+	var _add =  _xd * _xd + _yd * _yd;
+	if (is_sqrt != noone && is_sqrt)
+		return sqrt(_add);
+	else
+		return _add
+}
