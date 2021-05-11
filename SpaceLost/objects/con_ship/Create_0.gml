@@ -15,3 +15,5 @@ bInput = 0;
 force_dir = 0;
 control = noone;
 camera_zoom = 2;
+
+depth = ObjectDepth.Ship;

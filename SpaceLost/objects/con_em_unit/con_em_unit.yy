@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Unit",
-    "path": "folders/Objects/Unit.yy",
+    "name": "Enemy",
+    "path": "folders/Objects/Unit/Enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "con_em_unit",

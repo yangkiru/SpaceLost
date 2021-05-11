@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Unit",
-    "path": "folders/Objects/Unit.yy",
+    "name": "Player",
+    "path": "folders/Objects/Unit/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_player_unit",

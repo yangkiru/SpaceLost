@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"con_em_unit","path":"objects/con_em_unit/con_em_unit.yy",},"order":4,},
+    {"id":{"name":"con_em_unit","path":"objects/con_em_unit/con_em_unit.yy",},"order":1,},
     {"id":{"name":"obj_enemy_ship","path":"objects/obj_enemy_ship/obj_enemy_ship.yy",},"order":2,},
     {"id":{"name":"spr_em_face","path":"sprites/spr_em_face/spr_em_face.yy",},"order":0,},
     {"id":{"name":"Script7","path":"scripts/Script7/Script7.yy",},"order":0,},
@@ -46,6 +46,7 @@
     {"id":{"name":"enm_bullet_test","path":"sprites/enm_bullet_test/enm_bullet_test.yy",},"order":8,},
     {"id":{"name":"obj_player_ship","path":"objects/obj_player_ship/obj_player_ship.yy",},"order":1,},
     {"id":{"name":"spr_bst_ply_right_overdrive","path":"sprites/spr_bst_ply_right_overdrive/spr_bst_ply_right_overdrive.yy",},"order":6,},
+    {"id":{"name":"ObjectDepth","path":"scripts/ObjectDepth/ObjectDepth.yy",},"order":10,},
     {"id":{"name":"spr_basic_ship","path":"sprites/spr_basic_ship/spr_basic_ship.yy",},"order":0,},
     {"id":{"name":"spr_connector","path":"sprites/spr_connector/spr_connector.yy",},"order":4,},
     {"id":{"name":"draw_line_DDA_pattern","path":"scripts/draw_line_DDA_pattern/draw_line_DDA_pattern.yy",},"order":6,},
@@ -53,6 +54,7 @@
     {"id":{"name":"compatibility_report_230421_2325492549","path":"notes/compatibility_report_230421_2325492549/compatibility_report_230421_2325492549.yy",},"order":0,},
     {"id":{"name":"spr_empty","path":"sprites/spr_empty/spr_empty.yy",},"order":6,},
     {"id":{"name":"fnt_roading","path":"fonts/fnt_roading/fnt_roading.yy",},"order":0,},
+    {"id":{"name":"get_distance","path":"scripts/get_distance/get_distance.yy",},"order":9,},
     {"id":{"name":"csv_loader","path":"scripts/csv_loader/csv_loader.yy",},"order":1,},
     {"id":{"name":"obj_miner","path":"objects/obj_miner/obj_miner.yy",},"order":4,},
     {"id":{"name":"spr_miner","path":"sprites/spr_miner/spr_miner.yy",},"order":5,},
@@ -62,7 +64,7 @@
     {"id":{"name":"Loading","path":"rooms/Loading/Loading.yy",},"order":1,},
     {"id":{"name":"spr_bst_ply_left_overdrive","path":"sprites/spr_bst_ply_left_overdrive/spr_bst_ply_left_overdrive.yy",},"order":4,},
     {"id":{"name":"obj_bst_ply_back","path":"objects/obj_bst_ply_back/obj_bst_ply_back.yy",},"order":1,},
-    {"id":{"name":"con_unit","path":"objects/con_unit/con_unit.yy",},"order":3,},
+    {"id":{"name":"con_unit","path":"objects/con_unit/con_unit.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -111,7 +113,7 @@
     {"folderPath":"folders/Sprites/Enemy.yy","order":7,"resourceVersion":"1.0","name":"Enemy","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Unit.yy","order":6,"resourceVersion":"1.0","name":"Unit","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Unit/Enemy.yy","order":0,"resourceVersion":"1.0","name":"Enemy","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/Unit/Player.yy","order":2,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Unit/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Ship.yy","order":8,"resourceVersion":"1.0","name":"Ship","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Ship/boost.yy","order":12,"resourceVersion":"1.0","name":"boost","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Ship/boost/group1.yy","order":7,"resourceVersion":"1.0","name":"group1","tags":[],"resourceType":"GMFolder",},

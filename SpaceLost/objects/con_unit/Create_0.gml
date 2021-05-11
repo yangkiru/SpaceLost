@@ -1,5 +1,4 @@
 // unit_data = global.data[? "unit_name"];
-rope_length_const = 10;
 rope_length = real(unit_data[? "rope_length"]);
 mSpd = real(unit_data[? "mSpd"]);
 mSpd_const = real(unit_data[? "mSpd_const"]);
@@ -35,6 +34,10 @@ spr_idle = noone;
 spr_idle_grab = noone;
 spr_fly = noone;
 
+depth = ObjectDepth.Unit;
+
+c = make_color_rgb(238,23,93);
+
 function target_spr(spr) {
 	if (sprite_index != spr && spr != noone) {
 		sprite_index = spr;
@@ -45,17 +48,18 @@ function target_spr(spr) {
 function connect_rope() {
 	show_debug_message("rope");
 	if (control == object_index) {
-		if (closet_ship.control == noone && distance_to_object(closet_ship) <= rope_length * rope_length_const) {
+		if (closet_ship.control == noone && closet_ship_dist <= rope_length) {
 			if (connector != noone)
 				connector.connect(closet_ship, object_index, rope_length);
 			else {
-				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length * 16, 0);
+				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length, 0);
 			}
 			closet_ship.control = object_index;
 			control = closet_ship;
 			if (owner == obj_player_unit)
 				con_camera.follow = closet_ship;
 			state = States.Idle;
+			lInput = 0;
 			return closet_ship;
 		} else return noone;
 	} else {
@@ -68,6 +72,7 @@ function connect_rope() {
 		control = object_index;
 		if (owner == obj_player_unit)
 			con_camera.follow = object_index;
+		lInput = 0;
 	}
 }
 

@@ -1,37 +1,43 @@
-closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);//instance_nth_nearest(x, y, con_ship, 1);
+//instance_nth_nearest(x, y, con_ship, 1);
 
 //Inputs
 if (owner == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
+	if (control == object_index) {
+		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
+		closet_ship_dist = get_distance(closet_ship, self, true)
+	}
+	show_debug_message(hInput);
+	show_debug_message(vInput);
 } else if (parent == con_em_unit && control == object_index) {
 		enemy_input();
 } else {
 	hInput = 0;
 	vInput = 0;
 	lInput = 0;
+	state = States.Idle;
 }
 
 // Inits
-
-var isKey = hInput != 0 || vInput != 0;
-
-image_speed = image_speed == 0 ? image_speed : 1;
+isKey = hInput != 0 || vInput != 0;
+image_speed = 1;
 
 // State Machine
-if (control == owner) {
+if (control == object_index) {
 	switch (state) {
 		case States.Idle :
+			target_spr(grab ? spr_idle_grab : spr_idle);
 			if (isKey)
 				state = States.MoveStart;
 			break;
 		case States.MoveStart : 	
-				target_spr(grab ? spr_swim_grab : spr_swim);
-				state = States.Moving;
+			target_spr(grab ? spr_swim_grab : spr_swim);
+			state = States.Moving;
 			break;
 		case States.Moving :
-			if (owner == obj_player_unit) { // Player
+			if (object_index == obj_player_unit) { // Player unit
 				if (!isKey) { // if didn't get key		
 					var isEndOfFrame = image_index > (image_number -1);
 			
@@ -97,5 +103,4 @@ if (control == owner) {
 // Connect
 if (lInput) {
 	connect_rope();
-	lInput = 0;
 }
