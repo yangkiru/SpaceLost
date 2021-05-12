@@ -8,7 +8,7 @@ if (control != object_index) {
 
 if (control == object_index && owner == obj_player_unit) {
 	rope_rot = rope_rot > 360 ? rope_rot - 360 + rope_rot_spd : rope_rot + rope_rot_spd;
-	var inner_radius = rope_length;
+	var inner_radius = rope_length * 3;
 	var thickness = 4;
 	draw_set_color(c_lime);
 	draw_set_alpha(rope_circle_alpha);
@@ -26,7 +26,7 @@ if (control == object_index && owner == obj_player_unit) {
 	}
 	draw_set_alpha(1);
 	// closet ship
-	if (closet_ship != noone && closet_ship_dist <= rope_length) {
+	if (closet_ship != noone && closet_ship_dist <= rope_length * 1.4) {
 		//var dir = point_direction(x, y, closet_ship.x, closet_ship.y);
 		//var xx = lengthdir_x(min(closet_ship_dist,rope_length), dir);
 		//var yy = lengthdir_y(min(closet_ship_dist,rope_length), dir);

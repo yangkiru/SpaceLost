@@ -25,6 +25,7 @@ camera_zoom = 1;
 closet_ship = noone;
 
 t = 0;
+t_rope = 0;
 
 state = States.Idle;
 
@@ -48,11 +49,12 @@ function target_spr(spr) {
 function connect_rope() {
 	show_debug_message("rope");
 	if (control == object_index) {
-		if (closet_ship_dist <= rope_length) {
+		if (closet_ship_dist <= rope_length * 3) {
+			t_rope = 0;
 			if (connector != noone)
-				connector.connect(closet_ship, object_index, rope_length);
+				rope = connector.connect(closet_ship, object_index, rope_length * 3);
 			else {
-				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length, 0);
+				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length * 3, 0);
 			}
 			closet_ship.owner = object_index;
 			control = closet_ship;
@@ -65,7 +67,7 @@ function connect_rope() {
 	} else {
 		//physics_joint_delete(rope);
 		if (connector != noone)
-			connector.connect(noone);
+			rope = connector.connect(noone);
 		else physics_joint_delete(rope);
 		//rope = noone;
 		control.owner = noone;

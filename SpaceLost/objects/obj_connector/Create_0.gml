@@ -21,6 +21,7 @@ function connect(h, t, rope_length) {
 		head = physics_joint_revolute_create(self, h, h.phy_position_x, h.phy_position_y, 0, 0, 0, 0, 0, 0, 0);
 		tail = physics_joint_rope_create(self, t, phy_position_x, phy_position_y, t.phy_position_x, t.phy_position_y, rope_length, 0);
 		instance_activate_object(object_index);
+		return tail;
 	} else {
 		physics_joint_delete(head);
 		physics_joint_delete(tail);
@@ -28,5 +29,6 @@ function connect(h, t, rope_length) {
 		head = noone;
 		tail = noone;
 		instance_deactivate_object(object_index);
+		return noone;
 	}
 }
