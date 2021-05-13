@@ -1,16 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_white_dust",
-    "path": "sprites/spr_white_dust/spr_white_dust.yy",
+    "name": "player_bullet_test",
+    "path": "sprites/player_bullet_test/player_bullet_test.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
-  "physicsObject": false,
+  "physicsObject": true,
   "physicsSensor": false,
-  "physicsShape": 1,
+  "physicsShape": 0,
   "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
@@ -19,22 +19,25 @@
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
   "physicsKinematic": false,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":50.0,"y":50.0,},
+    {"x":50.0,"y":50.0,},
+  ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":5,"value":"obj_dust","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
+    {"varType":5,"value":"con_bullet","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
         "GMObject",
       ],"resourceVersion":"1.0","name":"obj","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Effect",
-    "path": "folders/Objects/Effect.yy",
+    "name": "Bullet",
+    "path": "folders/Objects/Weapon/Bullet.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_dust_pool",
+  "name": "con_bullet_pool",
   "tags": [],
   "resourceType": "GMObject",
 }

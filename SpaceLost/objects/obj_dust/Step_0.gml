@@ -14,6 +14,5 @@ x += lengthdir_x(speed, direction);
 y += lengthdir_y(speed, direction);
 
 if (image_xscale <= 0) { 
-	ds_stack_push(obj_dust_pool.pool, self);
-	instance_deactivate_object(self);
+	obj_dust_pool.deactivate_dust(self);
 }
