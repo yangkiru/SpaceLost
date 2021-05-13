@@ -27,10 +27,6 @@ if (control == object_index && owner == obj_player_unit) {
 	draw_set_alpha(1);
 	// closet ship
 	if (closet_ship != noone && closet_ship_dist <= rope_length * 1.4) {
-		//var dir = point_direction(x, y, closet_ship.x, closet_ship.y);
-		//var xx = lengthdir_x(min(closet_ship_dist,rope_length), dir);
-		//var yy = lengthdir_y(min(closet_ship_dist,rope_length), dir);
-		//draw_line_width_colour(x, y, x + xx, y + yy, 5, c, c);
 		draw_line_width_colour(x, y, closet_ship.x, closet_ship.y, 5, c, c);
 		draw_circle_color(closet_ship.x, closet_ship.y, 6, c, c, 0);
 	}

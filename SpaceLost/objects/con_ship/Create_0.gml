@@ -14,6 +14,7 @@ vInput = 0;
 bInput = 0;
 force_dir = 0;
 owner = noone;
+parent = object_get_parent(object_index);
 camera_zoom = 2;
 target = noone;
 
