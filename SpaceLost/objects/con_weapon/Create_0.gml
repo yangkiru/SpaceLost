@@ -6,9 +6,12 @@ function attack() {
 		phy_rotation = -other.image_angle;
 		phy_speed_x = 0;
 		phy_speed_y = 0;
-		physics_apply_local_impulse(x, y, 0, -10);
+		
+		physics_apply_local_impulse(0, 0, 0, -20);
 		owner = other.owner;
 	}
+	is_cool = false;
+	alarm[0] = 10;
 }
 
 function equip_weapon() {
@@ -21,3 +24,5 @@ image_speed = 0;
 owner = noone;
 offsetX = 0;
 offsetY = 0;
+
+is_cool = true;

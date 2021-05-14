@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "player_bullet_test",
-    "path": "sprites/player_bullet_test/player_bullet_test.yy",
+    "name": "spr_bullet_player",
+    "path": "sprites/spr_bullet_player/spr_bullet_player.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "parentObjectId": null,
   "physicsObject": true,
   "physicsSensor": true,
-  "physicsShape": 0,
+  "physicsShape": 1,
   "physicsGroup": 0,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
@@ -20,12 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [
-    {"x":50.0,"y":50.0,},
-    {"x":50.0,"y":50.0,},
+    {"x":0.0,"y":0.0,},
+    {"x":100.0,"y":0.0,},
+    {"x":100.0,"y":150.0,},
+    {"x":0.0,"y":150.0,},
   ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"con_ship","path":"objects/con_ship/con_ship.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
