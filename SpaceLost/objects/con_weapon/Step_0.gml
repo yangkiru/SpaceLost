@@ -1,4 +1,4 @@
-sInput = keyboard_check(vk_space);
+sInput = keyboard_check_released(vk_space);
 
 if (sInput && image_index < 1) {
 	image_speed = 1;

@@ -18,3 +18,7 @@ for(var i=0;i<ds_list_size(bst);i++) {
 bst_head.depth = depth-1;
 
 event_inherited();
+
+weapon = instance_create_layer(x, y-256, "Instances", con_weapon);
+
+weapon.equip_weapon();
