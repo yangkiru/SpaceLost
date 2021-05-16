@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "enm_boost",
-    "path": "sprites/enm_boost/enm_boost.yy",
+    "name": "spr_bst_enm_1",
+    "path": "sprites/spr_bst_enm_1/spr_bst_enm_1.yy",
   },
   "solid": false,
   "visible": true,

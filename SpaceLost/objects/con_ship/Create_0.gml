@@ -22,6 +22,9 @@ target = noone;
 
 depth = ObjectDepth.Ship;
 
+spr_original = noone;
+spr_shoot = noone;
+
 function damage(value) {
 	hp -= value;
 	

@@ -13,10 +13,12 @@ function activate_bullet() {
 		
 		instance_activate_object(bullet);
 	}
+	bullet.phy_active = true;
 	return bullet;
 }
 
 function deactivate_bullet(bullet) {
+	bullet.phy_active = false;
 	ds_queue_enqueue(pool, bullet);
 	instance_deactivate_object(bullet);
 }

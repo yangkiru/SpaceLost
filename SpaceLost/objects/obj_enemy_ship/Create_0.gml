@@ -15,3 +15,7 @@ for(var i=0;i<ds_list_size(bst);i++) {
 //bst_back.depth = depth-1;
 
 event_inherited();
+
+weapon = instance_create_layer(x, y-256, "Instances", obj_weapon_cannon);
+
+weapon.equip_weapon();

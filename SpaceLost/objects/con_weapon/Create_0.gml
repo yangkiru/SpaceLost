@@ -7,11 +7,16 @@ function attack() {
 		phy_speed_x = 0;
 		phy_speed_y = 0;
 		
-		physics_apply_local_impulse(0, 0, 0, -20);
+		physics_apply_local_impulse(0, 0, 0, other.bullet_spd);
+		phy_angular_velocity = 0;
 		owner = other.owner;
 	}
 	is_cool = false;
-	alarm[0] = 10;
+	if (owner.spr_shoot != noone) {
+		owner.sprite_index = owner.spr_shoot;
+		owner.image_index = 0;
+	}
+	alarm[0] = cool;
 }
 
 function equip_weapon() {
@@ -26,3 +31,7 @@ offsetX = 0;
 offsetY = 0;
 
 is_cool = true;
+sInput = false;
+
+bullet_spd = -5;
+cool = 10;

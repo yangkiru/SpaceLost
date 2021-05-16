@@ -19,6 +19,9 @@ bst_head.depth = depth-1;
 
 event_inherited();
 
-weapon = instance_create_layer(x, y-256, "Instances", con_weapon);
+spr_original = spr_basic_ship;
+spr_shoot = spr_basic_ship_shoot;
+
+weapon = instance_create_layer(x, y-256, "Instances", obj_weapon_cannon);
 
 weapon.equip_weapon();

@@ -1,5 +1,7 @@
 if (owner.owner == noone) return;
-sInput = keyboard_check(vk_space);
+
+if (owner.owner == obj_player_unit)
+	sInput = keyboard_check(vk_space);
 
 //if (sInput && image_index < 1) {
 //	image_speed = 5;

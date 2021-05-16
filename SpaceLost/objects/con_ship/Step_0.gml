@@ -25,19 +25,22 @@ if owner != noone {
 			target = target.control;
 		}
 		target_dist = get_distance(target, self, true);
-		var gap = 1500;
+		var gap = 2000;
 		if (target_dist > gap) {
 			var pd = point_direction(x, y, target.x, target.y);
 			hInput = lengthdir_x(1, pd);
 			vInput = -lengthdir_y(1, pd);
+			weapon.sInput = 0;
 		} else if (target_dist > gap * 0.7){
-			var pd = point_direction(x, y, target.x, target.y) - 70;
+			var pd = point_direction(x, y, target.x, target.y);
 			hInput = lengthdir_x(1, pd);
 			vInput = -lengthdir_y(1, pd);
+			weapon.sInput = 1;
 		} else {
 			var pd = point_direction(target.x, target.y, x, y);
 			hInput = lengthdir_x(1, pd);
 			vInput = -lengthdir_y(1, pd);
+			weapon.sInput = 0;
 		}
 	}
 	

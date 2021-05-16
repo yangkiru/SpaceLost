@@ -6,6 +6,8 @@ tSpd = real(unit_data[? "tSpd"]);
 tSpd_const = real(unit_data[? "tSpd_const"]);
 rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
 rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
+hp_max = real(unit_data[? "hp_max"]);
+hp = hp_max;
 
 rope = noone;
 rope_rot = 0;
@@ -38,6 +40,14 @@ spr_fly = noone;
 depth = ObjectDepth.Unit;
 
 c = make_color_rgb(238,23,93);
+
+function damage(value) {
+	hp -= value;
+	
+	if (hp <= 0) {
+		show_debug_message(object_get_name(object_index) + " destroyed!");
+	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
+}
 
 function target_spr(spr) {
 	if (sprite_index != spr && spr != noone) {

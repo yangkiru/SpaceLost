@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "ecm_ship_idle_028",
-    "path": "sprites/ecm_ship_idle_028/ecm_ship_idle_028.yy",
+    "name": "spr_enm_ship_1",
+    "path": "sprites/spr_enm_ship_1/spr_enm_ship_1.yy",
   },
   "solid": false,
   "visible": true,
