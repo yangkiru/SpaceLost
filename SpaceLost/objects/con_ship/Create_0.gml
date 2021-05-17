@@ -9,6 +9,10 @@ bmSpd = real(ship_data[? "bmSpd"]);
 btSpd = real(ship_data[? "btSpd"]);
 hp_max = real(ship_data[? "hp_max"]);
 hp = hp_max;
+bMax = real(ship_data[? "bMax"]);
+bCurrent = bMax;
+bConsume = real(ship_data[? "bConsume"]);
+bCoolSpd = real(ship_data[? "bCoolSpd"]);
 //
 
 hInput = 0;
@@ -24,6 +28,8 @@ depth = ObjectDepth.Ship;
 
 spr_original = noone;
 spr_shoot = noone;
+
+t_bCool = 0;
 
 function damage(value) {
 	hp -= value;

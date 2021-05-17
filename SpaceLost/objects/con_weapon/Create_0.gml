@@ -7,6 +7,7 @@ function attack() {
 		phy_speed_x = 0;
 		phy_speed_y = 0;
 		
+		phy_bullet = true;
 		physics_apply_local_impulse(0, 0, 0, other.bullet_spd);
 		phy_angular_velocity = 0;
 		owner = other.owner;
