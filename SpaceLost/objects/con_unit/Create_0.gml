@@ -41,18 +41,24 @@ depth = ObjectDepth.Unit;
 
 c = make_color_rgb(238,23,93);
 
-function damage(value) {
+on_destroy = noone;
+on_destroy_var = ds_list_create();
+
+function damage(value, attacker) {
 	hp -= value;
 	
 	if (hp <= 0) { // Destroy
-		destroy();
+		destroy(attacker);
 	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
 }
 
-function destroy() {
+function destroy(attacker) {
 	show_debug_message("destroy");
 	if (control != noone)
 		control.owner = noone;
+	ds_list_add(on_destroy_var, attacker);
+	if (on_destroy != noone)
+		script_execute(on_destroy, on_destroy_var);
 	instance_destroy(self);
 }
 

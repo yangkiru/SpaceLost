@@ -4,6 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
+on_destroy = spawn_coin;
+ds_list_add(on_destroy_var, irandom_range(1, 5), object_index);
+
 function enemy_input() {
 	if (control == object_index)
 		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);

@@ -31,17 +31,22 @@ spr_shoot = noone;
 
 t_bCool = 0;
 
-function damage(value) {
+on_destroy = noone;
+on_destroy_var = noone;
+
+function damage(value, attacker) {
 	hp -= value;
 	
 	if (hp <= 0) { // Destroy
-		destroy();
+		destroy(attacker);
 	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
 }
 
-function destroy() {
+function destroy(attacker) {
 	show_debug_message("destroy");
 	if (owner != noone)
 		owner.control = owner;
+	if (on_destroy != noone)
+		script_execute(on_destroy, on_destroy_var);
 	instance_destroy(self);
 }
