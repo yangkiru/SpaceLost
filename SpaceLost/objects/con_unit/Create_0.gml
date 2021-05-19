@@ -44,9 +44,16 @@ c = make_color_rgb(238,23,93);
 function damage(value) {
 	hp -= value;
 	
-	if (hp <= 0) {
-		show_debug_message(object_get_name(object_index) + " destroyed!");
+	if (hp <= 0) { // Destroy
+		destroy();
 	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
+}
+
+function destroy() {
+	show_debug_message("destroy");
+	if (control != noone)
+		control.owner = noone;
+	instance_destroy(self);
 }
 
 function target_spr(spr) {
