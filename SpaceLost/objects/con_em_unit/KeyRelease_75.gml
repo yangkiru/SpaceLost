@@ -1,0 +1,1 @@
+destroy(obj_player_unit.object_index);
