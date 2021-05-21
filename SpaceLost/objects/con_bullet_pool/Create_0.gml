@@ -14,6 +14,7 @@ function activate_bullet() {
 		instance_activate_object(bullet);
 	}
 	bullet.phy_active = true;
+	bullet.alarm[0] = 120;
 	return bullet;
 }
 
