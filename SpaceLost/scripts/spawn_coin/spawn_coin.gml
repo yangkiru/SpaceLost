@@ -6,7 +6,7 @@ function spawn_coin(_var){
 	var gap = 360 / _amount;
 	repeat(_amount) {
 		var coin = instance_create_layer(x, y, "Instances", obj_coin);
-		var force = random_range(0.1, 0.8);
+		var force = random_range(0.1, 0.5);
 		var xx = lengthdir_x(force, angle);
 		var yy = lengthdir_y(force, angle);
 		
