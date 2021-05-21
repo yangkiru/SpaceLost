@@ -1,4 +1,4 @@
-if (phy_speed < 1 && target != noone) {
+if (target != noone) {
 	t += 1 / room_speed;
 
 	phy_position_x = lerp(phy_position_x, target.phy_position_x, t);
@@ -6,6 +6,7 @@ if (phy_speed < 1 && target != noone) {
 	
 }
 
-if (t >= 0.8) {
+if (t >= 0.5) {
 	instance_destroy(self);
 }
+alarm[0] = 1;

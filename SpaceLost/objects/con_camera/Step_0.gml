@@ -1,3 +1,6 @@
+if (follow == noone || !instance_exists(follow))
+	return;
+
 if (follow != lastFollow) {
 	t = 0;
 }
@@ -5,6 +8,7 @@ lastFollow = follow;
 t = min(1, t + delta_time / 1000000 * camSpeed);
 
 target_zoom = follow.camera_zoom;
+
 if (current_zoom != target_zoom) {
 	camWidth = lerp(camWidth, originW * target_zoom, t);
 	camHeight = lerp(camHeight, originH * target_zoom, t);

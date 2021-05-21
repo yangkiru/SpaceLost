@@ -26,7 +26,7 @@ if (control == object_index && owner == obj_player_unit) {
 	}
 	draw_set_alpha(1);
 	// closet ship
-	if (closet_ship != noone && closet_ship_dist <= rope_length * 1.4) {
+	if (closet_ship != noone && instance_exists(closet_ship) && closet_ship_dist <= rope_length * 1.4) {
 		draw_line_width_colour(x, y, closet_ship.x, closet_ship.y, 5, c, c);
 		draw_circle_color(closet_ship.x, closet_ship.y, 6, c, c, 0);
 	}

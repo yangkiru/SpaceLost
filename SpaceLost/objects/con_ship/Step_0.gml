@@ -10,26 +10,28 @@ if owner != noone {
 		// 일단은 무기가 없으니 임의의 거리를 두게 이동
 		// 가장 가까운 타겟을 선택
 		target = instance_nth_nearest(self.x, self.y, obj_player_unit, 1);
-		if (target.control.parent == con_ship) {
-			target = target.control;
-		}
-		target_dist = get_distance(target, self, true);
-		var gap = 2000;
-		if (target_dist > gap) {
-			var pd = point_direction(x, y, target.x, target.y);
-			hInput = lengthdir_x(1, pd);
-			vInput = -lengthdir_y(1, pd);
-			weapon.sInput = 0;
-		} else if (target_dist > gap * 0.7){
-			var pd = point_direction(x, y, target.x, target.y);
-			hInput = lengthdir_x(1, pd);
-			vInput = -lengthdir_y(1, pd);
-			weapon.sInput = 1;
-		} else {
-			var pd = point_direction(target.x, target.y, x, y);
-			hInput = lengthdir_x(1, pd);
-			vInput = -lengthdir_y(1, pd);
-			weapon.sInput = 0;
+		if (target != noone) {
+			if (target.control.parent == con_ship) {
+				target = target.control;
+			}
+			target_dist = get_distance(target, self, true);
+			var gap = 2000;
+			if (target_dist > gap) {
+				var pd = point_direction(x, y, target.x, target.y);
+				hInput = lengthdir_x(1, pd);
+				vInput = -lengthdir_y(1, pd);
+				weapon.sInput = 0;
+			} else if (target_dist > gap * 0.7){
+				var pd = point_direction(x, y, target.x, target.y);
+				hInput = lengthdir_x(1, pd);
+				vInput = -lengthdir_y(1, pd);
+				weapon.sInput = 1;
+			} else {
+				var pd = point_direction(target.x, target.y, x, y);
+				hInput = lengthdir_x(1, pd);
+				vInput = -lengthdir_y(1, pd);
+				weapon.sInput = 0;
+			}
 		}
 	}
 	

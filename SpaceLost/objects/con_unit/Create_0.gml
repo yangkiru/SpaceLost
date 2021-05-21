@@ -42,7 +42,7 @@ depth = ObjectDepth.Unit;
 c = make_color_rgb(238,23,93);
 
 on_destroy = noone;
-on_destroy_var = ds_list_create();
+on_destroy_var = ds_map_create();
 
 function damage(value, attacker) {
 	hp -= value;
@@ -56,7 +56,7 @@ function destroy(attacker) {
 	show_debug_message("destroy");
 	if (control != noone)
 		control.owner = noone;
-	ds_list_add(on_destroy_var, attacker);
+	ds_map_add(on_destroy_var, "attacker", attacker);
 	if (on_destroy != noone)
 		script_execute(on_destroy, on_destroy_var);
 	instance_destroy(self);
