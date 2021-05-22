@@ -5,7 +5,7 @@
 event_inherited();
 
 on_destroy = spawn_coin;
-ds_map_add(on_destroy_var, "amount", irandom_range(100, 100));
+ds_map_add(on_destroy_var, "amount", irandom_range(10, 15));
 
 function enemy_input() {
 	if (control == object_index)
