@@ -1,3 +1,4 @@
 t = 0;
 target = noone;
-alarm[0] = 60;
+inc = 0.1;
+alarm[1] = 60;

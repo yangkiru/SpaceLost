@@ -3,7 +3,6 @@ if (target != noone) {
 
 	phy_position_x = lerp(phy_position_x, target.phy_position_x, t);
 	phy_position_y = lerp(phy_position_y, target.phy_position_y, t);
-	
 }
 
 if (t >= 0.5) {

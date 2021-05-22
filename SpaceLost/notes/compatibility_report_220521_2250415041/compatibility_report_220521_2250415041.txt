@@ -1,0 +1,99 @@
+Converting GML script: ${project_dir}\scripts\scr_create_trail\scr_create_trail.gml
+Converted description /// @description scr_create_trail(sprite, index, num_steps, alpha, fade, pinch_end)/// @param sprite
+/// @param  index
+/// @param  num_steps
+/// @param  alpha
+/// @param  fade
+/// @param  pinch_end
+
+Converting GML script: ${project_dir}\scripts\scr_create_trail_ext\scr_create_trail_ext.gml
+Converted description /// @description scr_create_trail_ext(sprite, index, num_steps, image_x_offset, image_y_offset, x_scale, y_scale, precision, alpha, fade, pinch_end)/// @param sprite
+/// @param  index
+/// @param  num_steps
+/// @param  image_x_offset
+/// @param  image_y_offset
+/// @param  x_scale
+/// @param  y_scale
+/// @param  precision
+/// @param  alpha
+/// @param  fade
+/// @param  pinch_end
+
+Converting GML script: ${project_dir}\scripts\scr_create_trail_full\scr_create_trail_full.gml
+Converted description /// @description scr_create_trail_full(sprite, index, num_steps, image_x_offset, image_y_offset, x_scale, y_scale, precision, alpha, fade, pinch_end, trail_colour, no_show_distance)/// @param sprite
+/// @param  index
+/// @param  num_steps
+/// @param  image_x_offset
+/// @param  image_y_offset
+/// @param  x_scale
+/// @param  y_scale
+/// @param  precision
+/// @param  alpha
+/// @param  fade
+/// @param  pinch_end
+/// @param  trail_colour
+/// @param  no_show_distance
+
+Converting GML script: ${project_dir}\scripts\scr_draw_trail\scr_draw_trail.gml
+Converted description /// @description scr_draw_trail()
+
+Converting GML script: ${project_dir}\objects\obj_mouse_follow\Create_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ball_basic\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ball_basic\Step_0.gml
+Converted description /// @description If outside room, then wrap around screen, Disconnect trail and begin a new trail
+
+Converting GML script: ${project_dir}\objects\obj_block_stripe\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_arrow\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_arrow\Step_0.gml
+Converted description /// @description If outside room, then wrap around screen, Disconnect trail and begin a new trail
+
+Converting GML script: ${project_dir}\objects\obj_dna\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_dna\Step_0.gml
+Converted description /// @description If outside room, then wrap around screen, Disconnect trail and begin a new trail
+
+Converting GML script: ${project_dir}\objects\obj_ball_rainbow\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ball_rainbow_rotated\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ship_blue\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ship_red\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_ship_gray\Alarm_0.gml
+Converted description /// @description Create Trail
+
+Converting GML script: ${project_dir}\objects\obj_trail\Create_0.gml
+Converted description /// @description Set Variables (These will be changed from the scr_create_trail* scripts.
+
+Converting GML script: ${project_dir}\objects\obj_trail\Destroy_0.gml
+Converted description /// @description Clear Path from memory
+
+Converting GML script: ${project_dir}\objects\obj_trail\Step_0.gml
+Converted description /// @description increment trail x_offset
+
+Added compatibility script 'action/action_create_object.gml'
+Added compatibility script 'action/action_if_dice.gml'
+Added compatibility script 'action/action_kill_object.gml'
+Added compatibility script 'action/action_set_alarm.gml'
+Added compatibility script 'action/action_set_motion.gml'
+Added compatibility script 'action/action_set_relative.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'texture/texture_set_repeat.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'
