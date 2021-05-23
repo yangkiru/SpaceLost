@@ -103,7 +103,6 @@
     {"id":{"name":"csv_loader","path":"scripts/csv_loader/csv_loader.yy",},"order":1,},
     {"id":{"name":"obj_ship_red","path":"objects/obj_ship_red/obj_ship_red.yy",},"order":5,},
     {"id":{"name":"obj_miner","path":"objects/obj_miner/obj_miner.yy",},"order":1,},
-    {"id":{"name":"room_trail","path":"rooms/room_trail/room_trail.yy",},"order":2,},
     {"id":{"name":"spr_miner","path":"sprites/spr_miner/spr_miner.yy",},"order":5,},
     {"id":{"name":"spr_asteroid_blue_small_1","path":"sprites/spr_asteroid_blue_small_1/spr_asteroid_blue_small_1.yy",},"order":0,},
     {"id":{"name":"obj_trail","path":"objects/obj_trail/obj_trail.yy",},"order":6,},
@@ -146,7 +145,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Loading","path":"rooms/Loading/Loading.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"roomId":{"name":"room_trail","path":"rooms/room_trail/room_trail.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

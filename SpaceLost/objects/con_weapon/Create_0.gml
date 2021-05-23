@@ -8,16 +8,18 @@ function attack() {
 		phy_speed_y = 0;
 		
 		phy_bullet = true;
-		physics_apply_local_impulse(0, 0, 0, other.bullet_spd);
+		physics_apply_local_impulse(0, 0, 0, -other.pro_force);
 		phy_angular_velocity = 0;
 		owner = other.owner;
+		dmg = other.pro_dmg;
+		alarm[0] = other.pro_lifetime;
 	}
 	is_cool = false;
 	if (owner.spr_shoot != noone) {
 		owner.sprite_index = owner.spr_shoot;
 		owner.image_index = 0;
 	}
-	alarm[0] = cool;
+	alarm[0] = shoot_spd;
 }
 
 function equip_weapon() {
@@ -26,6 +28,15 @@ function equip_weapon() {
 	offsetY = y - owner.y;
 }
 
+// Variable Settings
+// weapon_data = global.data[? "weapon_name"];
+
+shoot_spd = real(weapon_data[? "shoot_spd"]);
+pro_amount = real(weapon_data[? "pro_amount"]);
+pro_dmg = real(weapon_data[? "pro_dmg"]);
+pro_lifetime = real(weapon_data[? "pro_lifetime"]);
+pro_force = real(weapon_data[? "pro_force"]);
+
 image_speed = 0;
 owner = noone;
 offsetX = 0;
@@ -33,6 +44,3 @@ offsetY = 0;
 
 is_cool = true;
 sInput = false;
-
-bullet_spd = -5;
-cool = 10;

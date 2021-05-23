@@ -1,2 +1,2 @@
-damage = 1;
+dmg = 1;
 owner = noone;
