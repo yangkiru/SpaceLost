@@ -265,8 +265,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Trail",
-    "path": "folders/Sprites/Trail.yy",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_effect_coin_destroy",
