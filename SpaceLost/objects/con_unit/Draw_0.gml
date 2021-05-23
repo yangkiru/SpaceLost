@@ -34,3 +34,10 @@ if (control == object_index && owner == obj_player_unit) {
 
 
 draw_self();
+
+if (control == object_index && owner == obj_player_unit) {
+	draw_set_color(c_white);
+	draw_set_font(fnt_oxygen);
+	draw_set_halign(fa_center);
+	draw_text(x, y - 120, "Oxygen 100%");
+}

@@ -44,6 +44,7 @@
     {"id":{"name":"obj_bst_ply_left","path":"objects/obj_bst_ply_left/obj_bst_ply_left.yy",},"order":3,},
     {"id":{"name":"con_weapon","path":"objects/con_weapon/con_weapon.yy",},"order":0,},
     {"id":{"name":"obj_player_unit","path":"objects/obj_player_unit/obj_player_unit.yy",},"order":1,},
+    {"id":{"name":"fnt_oxygen","path":"fonts/fnt_oxygen/fnt_oxygen.yy",},"order":1,},
     {"id":{"name":"attach_to_object","path":"scripts/attach_to_object/attach_to_object.yy",},"order":11,},
     {"id":{"name":"con_grabable","path":"objects/con_grabable/con_grabable.yy",},"order":5,},
     {"id":{"name":"action_set_relative","path":"scripts/action_set_relative/action_set_relative.yy",},"order":6,},
