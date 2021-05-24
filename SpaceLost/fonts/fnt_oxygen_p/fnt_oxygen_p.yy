@@ -254,7 +254,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fnt_oxygen",
+  "name": "fnt_oxygen_p",
   "tags": [],
   "resourceType": "GMFont",
 }

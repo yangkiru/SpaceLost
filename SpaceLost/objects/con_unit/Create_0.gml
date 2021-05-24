@@ -1,4 +1,5 @@
 // unit_data = global.data[? "unit_name"];
+#region Sheet Variables
 rope_length = real(unit_data[? "rope_length"]);
 mSpd = real(unit_data[? "mSpd"]);
 mSpd_const = real(unit_data[? "mSpd_const"]);
@@ -7,43 +8,53 @@ tSpd_const = real(unit_data[? "tSpd_const"]);
 rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
 rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
 hp_max = real(unit_data[? "hp_max"]);
+oxygen_max = unit_data[? "oxygen_max"];
+oxygen_usage = unit_data[? "oxygen_usage"];
+#endregion
+#region Variables
 hp = hp_max;
+oxygen = oxygen_max;
+oxygen_regen = 1;
 
+// Rope
 rope = noone;
 rope_rot = 0;
 connector = noone;
 
-move_target = noone;
-grab = -1;
-
+// Inputs
 hInput = 0;
 vInput = 0;
 lInput = 0;
 
-control = object_index; // This object control it
-owner = object_index; // Who control this
-parent = object_get_parent(object_index);
-camera_zoom = 1;
-closet_ship = noone;
-
+// Times
 t = 0;
 t_rope = 0;
 
-state = States.Idle;
-
+// Sprites
 spr_swim = noone;
 spr_swim_grab = noone;
 spr_idle = noone;
 spr_idle_grab = noone;
 spr_fly = noone;
 
-depth = ObjectDepth.Unit;
-
-c = make_color_rgb(238,23,93);
-
+// On Destroy
 on_destroy = noone;
 on_destroy_var = ds_map_create();
 
+// Other
+control = object_index; // This object control it
+owner = object_index; // Who control this
+parent = object_get_parent(object_index);
+camera_zoom = 1;
+closet_ship = noone;
+depth = ObjectDepth.Unit;
+c = make_color_rgb(238,23,93);
+state = States.Idle;
+move_target = noone;
+grab = -1;
+
+#endregion
+#region Functions
 function damage(value, attacker) {
 	hp -= value;
 	
@@ -125,6 +136,8 @@ function movement() {
 function enemy_input() {}
 
 function enemy_movement() {}
+
+#endregion
 
 enum States {
 	Idle, MoveStart, Moving, MoveStop, Turning, Chasing, Running

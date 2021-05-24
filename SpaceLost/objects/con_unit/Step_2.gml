@@ -13,3 +13,4 @@ if (rope != noone && t_rope <= 1) {
 	if (t_rope > 1) t_rope = 1;
 	physics_joint_set_value(rope, phy_joint_max_length, lerp(physics_joint_get_value(rope, phy_joint_max_length), rope_length, t_rope) * 0.01);
 }
+

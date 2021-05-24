@@ -26,18 +26,22 @@ if (control == object_index && owner == obj_player_unit) {
 	}
 	draw_set_alpha(1);
 	// closet ship
-	if (closet_ship != noone && instance_exists(closet_ship) && closet_ship_dist <= rope_length * 1.4) {
-		draw_line_width_colour(x, y, closet_ship.x, closet_ship.y, 5, c, c);
-		draw_circle_color(closet_ship.x, closet_ship.y, 6, c, c, 0);
-	}
+	//if (closet_ship != noone && instance_exists(closet_ship) && closet_ship_dist <= rope_length * 1.4) {
+	//	draw_line_width_colour(x, y, closet_ship.x, closet_ship.y, 5, c, c);
+	//	draw_circle_color(closet_ship.x, closet_ship.y, 6, c, c, 0);
+	//}
 }
 
 
 draw_self();
 
-if (control == object_index && owner == obj_player_unit) {
+if (control == object_index && owner == obj_player_unit || oxygen < oxygen_max) {
 	draw_set_color(c_white);
-	draw_set_font(fnt_oxygen);
+	if (control == owner)
+		draw_set_font(fnt_oxygen_p);
+	else if (control.parent == con_ship)
+		draw_set_font(fnt_oxygen_s);
 	draw_set_halign(fa_center);
-	draw_text(x, y - 120, "Oxygen 100%");
+	var str = "Oxygen " + string(oxygen / oxygen_max * 100) + "%";
+	draw_text_outline(x, y - 120, c_blue, c_aqua, str);
 }

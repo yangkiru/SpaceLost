@@ -78,7 +78,7 @@ if (control == object_index) {
 				last_spd_x = phy_speed_x;
 				last_spd_y = phy_speed_y;
 			}
-			t += delta_time / 1000000;
+			t += 1 / room_speed;
 			phy_speed_x = lerp(last_spd_x, 0, min(1,t));
 			phy_speed_y = lerp(last_spd_y, 0, min(1,t));
 			if (t > 1) {
@@ -102,3 +102,8 @@ if (control == object_index) {
 if (lInput) {
 	connect_rope();
 }
+// Oxygen
+if (control.parent != con_ship)
+	oxygen -= oxygen_usage / room_speed;
+else
+	oxygen += oxygen_regen / room_speed;
