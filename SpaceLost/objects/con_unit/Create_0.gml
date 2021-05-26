@@ -14,7 +14,6 @@ oxygen_usage = unit_data[? "oxygen_usage"];
 #region Variables
 hp = hp_max;
 oxygen = oxygen_max;
-oxygen_regen = 1;
 
 // Rope
 rope = noone;
@@ -119,7 +118,7 @@ function movement() {
 		if sum != 0
 		physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
 	} else { // Contorl ship
-		if (move_target == noone) {
+		if (move_target == noone || !instance_exists(move_target)) {
 			state = States.MoveStop;
 			return;
 		}

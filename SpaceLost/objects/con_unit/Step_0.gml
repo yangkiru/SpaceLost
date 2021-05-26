@@ -12,6 +12,7 @@ if (owner == obj_player_unit) {
 } else if (parent == con_em_unit && control == object_index) {
 		enemy_input();
 } else {
+	show_debug_message(object_get_name(object_index));
 	hInput = 0;
 	vInput = 0;
 	lInput = 0;
@@ -106,4 +107,4 @@ if (lInput) {
 if (control.parent != con_ship)
 	oxygen -= oxygen_usage / room_speed;
 else
-	oxygen += oxygen_regen / room_speed;
+	oxygen = oxygen_max;

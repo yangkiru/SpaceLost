@@ -4,6 +4,10 @@ if getfile != 0 {
 }
 else {
 	global.data = csv_loader(fname);
-
-	room_goto_next();
+	if (global.data != noone)
+		room_goto_next();
+	else {
+		show_debug_message("load fail");
+		room_restart();
+	}
 }

@@ -8,9 +8,19 @@ on_destroy = spawn_coin;
 ds_map_add(on_destroy_var, "amount", irandom_range(10, 15));
 
 function enemy_input() {
-	if (control == object_index)
+	if (control == object_index) {
 		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
-		closet_ship_dist = get_distance(closet_ship, self, true);
+		if (closet_ship != noone)
+			closet_ship_dist = get_distance(closet_ship, self, true);
+		else {
+			show_debug_message("ship lost");
+			//move_target = obj_player_unit.control;
+			//var dir = point_direction(x, y, move_target.x, move_target.y);
+			//hInput = lengthdir_x(1, dir);
+			//vInput = lengthdir_y(1, dir);
+		}
+	}
+	
 	switch (state) {
 		case States.MoveStop :
 			move_target = noone;

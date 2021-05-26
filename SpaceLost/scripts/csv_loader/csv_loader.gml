@@ -3,7 +3,9 @@ function csv_loader(directory){
 	var file_grid = load_csv(directory);
 	var data = ds_map_create();
 	var m = noone;
-
+	if (!ds_exists(file_grid, ds_type_grid)) {
+		return noone;
+	}
 	var hh = ds_grid_height(file_grid);
 	for (var i = 1; i < hh; i++;)
 	{
