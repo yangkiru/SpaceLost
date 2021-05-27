@@ -65,7 +65,7 @@ if owner != noone {
 	force_dir = 0;
 }
 
-if (!bInput && --t_bCool <= 0) bCurrent = min(bMax, bCurrent + bCoolSpd / room_speed);
+if (!bInput) bCurrent = min(bMax, bCurrent + bCoolSpd / room_speed);
 // Shake
 if (bInput && !(con_camera.shake) && con_camera.shakeForce == 0) {
 		con_camera.shake = true;

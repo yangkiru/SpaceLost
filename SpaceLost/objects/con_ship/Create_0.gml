@@ -13,13 +13,12 @@ bMax = real(ship_data[? "bMax"]);
 bCurrent = bMax;
 bConsume = real(ship_data[? "bConsume"]);
 bCoolSpd = real(ship_data[? "bCoolSpd"]);
-//
 
 hInput = 0;
 vInput = 0;
 bInput = 0;
 force_dir = 0;
-owner = noone;
+owner = object_index;
 parent = object_get_parent(object_index);
 camera_zoom = 2;
 target = noone;
@@ -44,8 +43,8 @@ function damage(value, attacker) {
 
 function destroy(attacker) {
 	show_debug_message("destroy");
-	if (owner != noone)
-		owner.control = owner;
+	if (owner != object_index)
+		owner.control = owner.object_index;
 	if (on_destroy != noone)
 		script_execute(on_destroy, on_destroy_var);
 	instance_destroy(self);

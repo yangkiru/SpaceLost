@@ -90,9 +90,9 @@ function connect_rope() {
 				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length * 3, 0);
 			}
 			closet_ship.owner = object_index;
-			control = closet_ship;
+			control = closet_ship.object_index;
 			if (owner == obj_player_unit)
-				con_camera.follow = closet_ship;
+				con_camera.follow = closet_ship.object_index;
 			state = States.Idle;
 			lInput = 0;
 			return closet_ship;
@@ -103,7 +103,7 @@ function connect_rope() {
 			rope = connector.connect(noone);
 		else physics_joint_delete(rope);
 		//rope = noone;
-		control.owner = noone;
+		control.owner = control.object_index;
 		control = object_index;
 		if (owner == obj_player_unit)
 			con_camera.follow = object_index;

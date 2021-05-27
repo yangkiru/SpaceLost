@@ -1,18 +1,19 @@
 //instance_nth_nearest(x, y, con_ship, 1);
 
-//Inputs
+// Closet Ship
+if (control == object_index) {
+		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
+		if (closet_ship != noone)
+			closet_ship_dist = get_distance(closet_ship, self, true);
+}
+// Inputs
 if (owner == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
-	if (control == object_index) {
-		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
-		closet_ship_dist = get_distance(closet_ship, self, true)
-	}
-} else if (parent == con_em_unit && control == object_index) {
-		enemy_input();
+} else if (parent == con_em_unit && control == object_index && closet_ship != noone) {
+	enemy_input();
 } else {
-	show_debug_message(object_get_name(object_index));
 	hInput = 0;
 	vInput = 0;
 	lInput = 0;
