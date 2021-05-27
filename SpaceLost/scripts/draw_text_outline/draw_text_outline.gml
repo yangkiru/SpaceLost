@@ -1,20 +1,16 @@
-function draw_text_outline(x, y, outline_color, str_color, str) {
-var xx,yy;  
-xx = argument[0];  
-yy = argument[1];  
-  
+function draw_text_outline(x, y, outline_color, str_color, str, size) {
 //Outline  
-draw_set_color(argument[2]);  
-draw_text(xx+1, yy+1, argument[4]);  
-draw_text(xx-1, yy-1, argument[4]);  
-draw_text(xx,   yy+1, argument[4]);  
-draw_text(xx+1,   yy, argument[4]);  
-draw_text(xx,   yy-1, argument[4]);  
-draw_text(xx-1,   yy, argument[4]);  
-draw_text(xx-1, yy+1, argument[4]);  
-draw_text(xx+1, yy-1, argument[4]);  
+draw_set_color(outline_color);  
+draw_text(x+size, y+size, str);  
+draw_text(x-size, y-size, str);  
+draw_text(x,   y+size, str);  
+draw_text(x+size,   y, str);  
+draw_text(x,   y-size, str);  
+draw_text(x-size,   y, str);  
+draw_text(x-size, y+size, str);  
+draw_text(x+size, y-size, str);  
   
 //Text  
-draw_set_color(argument[3]);  
-draw_text(xx, yy, argument[4]);
+draw_set_color(str_color);  
+draw_text(x, y, str);
 }

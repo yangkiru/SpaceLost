@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_effect_coin_destroy",
-    "path": "sprites/spr_effect_coin_destroy/spr_effect_coin_destroy.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -105,6 +105,6 @@ if (lInput) {
 }
 // Oxygen
 if (control.parent != con_ship)
-	oxygen -= oxygen_usage / room_speed;
+	oxygen = max(0, oxygen - oxygen_usage / room_speed);
 else
 	oxygen = oxygen_max;
