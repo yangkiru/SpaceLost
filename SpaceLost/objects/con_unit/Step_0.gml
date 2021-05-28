@@ -14,10 +14,14 @@ if (owner == obj_player_unit) {
 } else if (parent == con_em_unit && control == object_index && closet_ship != noone) {
 	enemy_input();
 } else {
-	hInput = 0;
-	vInput = 0;
+	var target = obj_player_unit.object_index;
+	var pd = point_direction(target.x, target.y, x, y);
+	hInput = lengthdir_x(1, pd);
+	vInput = lengthdir_y(1, pd);
+	
 	lInput = 0;
-	state = States.Idle;
+	state = States.Turning;
+	enemy_movement();
 }
 
 // Inits
@@ -54,6 +58,7 @@ if (control == object_index) {
 			break;
 		case States.Turning :
 			if (isKey) {
+				if (parent == con_em_unit) show_debug_message("enemey turn");
 				var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y-vInput) + 90; // get direction
 				var dd = angle_difference(phy_rotation, pd);
 				phy_rotation -= min(abs(dd), tSpd * tSpd_const) * sign(dd);

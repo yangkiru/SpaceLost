@@ -30,4 +30,4 @@ if (control == object_index && owner == obj_player_unit) {
 
 draw_self();
 
-draw_text(x, y + 50, "control:" + object_get_name(control) + "\nowner:" + object_get_name(owner) + "\ncloset_ship:" + object_get_name(closet_ship));
+//draw_text(x, y + 50, "control:" + object_get_name(control) + "\nowner:" + object_get_name(owner) + "\ncloset_ship:" + object_get_name(closet_ship));
