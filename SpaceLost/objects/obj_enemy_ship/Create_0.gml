@@ -16,6 +16,9 @@ for(var i=0;i<ds_list_size(bst);i++) {
 
 event_inherited();
 
+spr_original = spr_enm_ship_1;
+spr_shoot = spr_enm_ship_1_shoot;
+
 weapon = instance_create_layer(x, y-256, "Instances", obj_weapon_cannon);
 
 weapon.equip_weapon();
