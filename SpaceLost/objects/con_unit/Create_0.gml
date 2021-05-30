@@ -56,7 +56,6 @@ grab = -1;
 #region Functions
 function damage(value, attacker) {
 	hp -= value;
-	
 	if (hp <= 0) { // Destroy
 		destroy(attacker);
 	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
