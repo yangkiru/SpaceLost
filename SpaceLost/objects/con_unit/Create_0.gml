@@ -10,7 +10,7 @@ rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
 hp_max = real(unit_data[? "hp_max"]);
 oxygen_max = real(unit_data[? "oxygen_max"]);
 oxygen_usage = real(unit_data[? "oxygen_usage"]);
-resist_kb = real(unit_data[? "resist_kb"]);
+const_kb = real(unit_data[? "const_kb"]);
 #endregion
 #region Variables
 hp = hp_max;

@@ -13,7 +13,7 @@ bMax = real(ship_data[? "bMax"]);
 bCurrent = bMax;
 bConsume = real(ship_data[? "bConsume"]);
 bCoolSpd = real(ship_data[? "bCoolSpd"]);
-resist_kb = real(ship_data[? "resist_kb"]);
+const_kb = real(ship_data[? "const_kb"]);
 
 hInput = 0;
 vInput = 0;
