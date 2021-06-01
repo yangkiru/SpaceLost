@@ -1,5 +1,5 @@
 function attack() {
-	var bullet = pool.activate_bullet();
+	var bullet = pool.activate_obj();
 	with (bullet) {
 		phy_position_x = other.x;
 		phy_position_y = other.y;

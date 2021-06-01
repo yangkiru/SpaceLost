@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "player_bullet_test",
-    "path": "sprites/player_bullet_test/player_bullet_test.yy",
+    "name": "spr_cannon_bullet",
+    "path": "sprites/spr_cannon_bullet/spr_cannon_bullet.yy",
   },
   "solid": false,
   "visible": false,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "con_obj_pool",
+    "path": "objects/con_obj_pool/con_obj_pool.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 0,
@@ -26,11 +29,7 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
-  "properties": [
-    {"varType":5,"value":"con_bullet","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
-        "GMObject",
-      ],"resourceVersion":"1.0","name":"obj","tags":[],"resourceType":"GMObjectProperty",},
-  ],
+  "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Bullet",

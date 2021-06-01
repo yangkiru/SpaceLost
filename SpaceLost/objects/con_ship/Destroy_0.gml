@@ -6,3 +6,6 @@ if (bst != noone) {
 	}
 	ds_list_destroy(bst);
 }
+if (owner != noone) {
+	owner.rope = noone;
+}
