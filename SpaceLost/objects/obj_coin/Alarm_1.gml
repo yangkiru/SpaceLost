@@ -6,6 +6,6 @@ if (target != noone) {
 }
 
 if (t >= 0.5) {
-	instance_destroy(self);
+	obj_coin_pool.deactivate_obj(self);
 }
 alarm[1] = 1;
