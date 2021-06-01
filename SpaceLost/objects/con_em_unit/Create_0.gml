@@ -8,7 +8,7 @@ on_destroy = spawn_coin;
 ds_map_add(on_destroy_var, "amount", irandom_range(10, 15));
 
 function enemy_input() {
-	if (control == object_index) {
+	if (control == self) {
 		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
 		if (closet_ship != noone)
 			closet_ship_dist = get_distance(closet_ship, self, true);
@@ -29,7 +29,7 @@ function enemy_input() {
 			state = States.Idle;
 			break;
 		case States.Moving : case States.Idle :
-			if (control == object_index) {
+			if (control == self) {
 				if (closet_ship != noone) {
 					if (closet_ship_dist > rope_length) {
 						move_target = closet_ship;

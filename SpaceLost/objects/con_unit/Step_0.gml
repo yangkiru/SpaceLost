@@ -1,20 +1,23 @@
 //instance_nth_nearest(x, y, con_ship, 1);
 
 // Closet Ship
-if (control == object_index) {
-		closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
-		if (closet_ship != noone)
-			closet_ship_dist = get_distance(closet_ship, self, true);
+if (control == self) {
+	closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
+	if (closet_ship != noone)
+		closet_ship_dist = get_distance(closet_ship, self, true);
 }
 // Inputs
-if (owner == obj_player_unit) {
+show_debug_message(parent == con_em_unit);
+show_debug_message(control == self);
+show_debug_message(closet_ship != noone);
+if (owner.object_index == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
-} else if (parent == con_em_unit && control == object_index && closet_ship != noone) {
+} else if (parent == con_em_unit && control == self && closet_ship != noone) {
 	enemy_input();
 } else {
-	var target = obj_player_unit.object_index;
+	var target = obj_player_unit;
 	var pd = point_direction(target.x, target.y, x, y);
 	hInput = lengthdir_x(1, pd);
 	vInput = lengthdir_y(1, pd);
@@ -29,7 +32,7 @@ isKey = hInput != 0 || vInput != 0;
 image_speed = 1;
 
 // State Machine
-if (control == object_index) {
+if (control == self) {
 	switch (state) {
 		case States.Idle :
 			target_spr(grab ? spr_idle_grab : spr_idle);

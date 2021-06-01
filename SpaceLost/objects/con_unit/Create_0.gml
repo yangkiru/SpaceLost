@@ -41,8 +41,8 @@ on_destroy = noone;
 on_destroy_var = ds_map_create();
 
 // Other
-control = object_index; // This object control it
-owner = object_index; // Who control this
+control = self; // This object control it
+owner = self; // Who control this
 parent = object_get_parent(object_index);
 camera_zoom = 1;
 closet_ship = noone;
@@ -80,18 +80,18 @@ function target_spr(spr) {
 
 function connect_rope() {
 	show_debug_message("rope");
-	if (control == object_index) {
+	if (control == self) {
 		if (closet_ship_dist <= rope_length * 3) {
 			t_rope = 0;
 			if (connector != noone)
-				rope = connector.connect(closet_ship, object_index, rope_length * 3);
+				rope = connector.connect(closet_ship, self, rope_length * 3);
 			else {
 				rope = physics_joint_rope_create(self, closet_ship, phy_position_x, phy_position_y, closet_ship.phy_position_x, closet_ship.phy_position_y, rope_length * 3, 0);
 			}
-			closet_ship.owner = object_index;
-			control = closet_ship.object_index;
-			if (owner == obj_player_unit)
-				con_camera.follow = closet_ship.object_index;
+			closet_ship.owner = self;
+			control = closet_ship;
+			if (owner.object_index == obj_player_unit)
+				con_camera.follow = closet_ship;
 			state = States.Idle;
 			lInput = 0;
 			return closet_ship;
@@ -102,16 +102,16 @@ function connect_rope() {
 			rope = connector.connect(noone);
 		else physics_joint_delete(rope);
 		//rope = noone;
-		control.owner = control.object_index;
-		control = object_index;
-		if (owner == obj_player_unit)
-			con_camera.follow = object_index;
+		control.owner = control;
+		control = self;
+		if (owner.object_index == obj_player_unit)
+			con_camera.follow = self;
 		lInput = 0;
 	}
 }
 
 function movement() {
-	if control == object_index { // Control player
+	if control == self { // Control player
 		var sum = abs(hInput) + abs(vInput);
 		var spd = mSpd * mSpd_const;
 		if sum != 0

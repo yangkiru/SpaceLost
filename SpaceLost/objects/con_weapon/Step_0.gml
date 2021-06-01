@@ -1,6 +1,6 @@
 if (owner.owner == noone) return;
 
-if (owner.owner == obj_player_unit)
+if (owner.owner.object_index == obj_player_unit)
 	sInput = keyboard_check(vk_space);
 
 //if (sInput && image_index < 1) {

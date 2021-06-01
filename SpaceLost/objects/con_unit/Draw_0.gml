@@ -1,4 +1,4 @@
-if (control != object_index) {
+if (control != self) {
 		//var target = connector != noone ? connector : control;
 		if (connector != noone)
 			draw_line_width_colour(phy_position_x, phy_position_y, connector.phy_position_x, connector.phy_position_y, 10, c, c);
@@ -6,7 +6,7 @@ if (control != object_index) {
 			draw_line_width_colour(phy_position_x, phy_position_y, control.phy_position_x, control.phy_position_y, 10, c, c);
 }
 
-if (control == object_index && owner == obj_player_unit) {
+if (control == self && owner.object_index == obj_player_unit) {
 	rope_rot = rope_rot > 360 ? rope_rot - 360 + rope_rot_spd : rope_rot + rope_rot_spd;
 	var inner_radius = rope_length * 3;
 	var thickness = 4;
