@@ -13,6 +13,7 @@ function attack() {
 		owner = other.owner;
 		dmg = other.pro_dmg;
 		alarm[0] = other.pro_lifetime;
+		kb_force = other.kb_force;
 	}
 	is_cool = false;
 	if (owner.spr_shoot != noone) {
@@ -36,6 +37,7 @@ pro_amount = real(weapon_data[? "pro_amount"]);
 pro_dmg = real(weapon_data[? "pro_dmg"]);
 pro_lifetime = real(weapon_data[? "pro_lifetime"]);
 pro_force = real(weapon_data[? "pro_force"]);
+kb_force = real(weapon_data[? "kb_force"]);
 
 image_speed = 0;
 owner = noone;

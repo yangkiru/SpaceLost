@@ -15,6 +15,7 @@
     {"id":{"name":"obj_dust","path":"objects/obj_dust/obj_dust.yy",},"order":0,},
     {"id":{"name":"obj_coin_destroy","path":"objects/obj_coin_destroy/obj_coin_destroy.yy",},"order":8,},
     {"id":{"name":"obj_bst_ply_head","path":"objects/obj_bst_ply_head/obj_bst_ply_head.yy",},"order":4,},
+    {"id":{"name":"con_input_manager","path":"objects/con_input_manager/con_input_manager.yy",},"order":13,},
     {"id":{"name":"obj_coin_pool","path":"objects/obj_coin_pool/obj_coin_pool.yy",},"order":12,},
     {"id":{"name":"scr_create_trail","path":"scripts/scr_create_trail/scr_create_trail.yy",},"order":15,},
     {"id":{"name":"obj_connector","path":"objects/obj_connector/obj_connector.yy",},"order":2,},

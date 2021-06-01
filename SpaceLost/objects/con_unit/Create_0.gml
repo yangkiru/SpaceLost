@@ -8,8 +8,9 @@ tSpd_const = real(unit_data[? "tSpd_const"]);
 rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
 rope_circle_alpha = real(unit_data[? "rope_circle_alpha"]);
 hp_max = real(unit_data[? "hp_max"]);
-oxygen_max = unit_data[? "oxygen_max"];
-oxygen_usage = unit_data[? "oxygen_usage"];
+oxygen_max = real(unit_data[? "oxygen_max"]);
+oxygen_usage = real(unit_data[? "oxygen_usage"]);
+resist_kb = real(unit_data[? "resist_kb"]);
 #endregion
 #region Variables
 hp = hp_max;

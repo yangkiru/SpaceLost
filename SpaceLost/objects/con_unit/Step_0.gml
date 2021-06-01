@@ -70,7 +70,6 @@ if (control == self) {
 			break;
 	}
 } else {
-	show_debug_message(object_get_name(control.object_index));
 	switch (state) {
 		case States.MoveStart :
 			target_spr(grab ? spr_swim_grab : spr_swim);
