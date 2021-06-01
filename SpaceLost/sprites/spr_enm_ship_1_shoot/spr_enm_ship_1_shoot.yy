@@ -119,7 +119,7 @@
     "spriteId": {"name":"spr_enm_ship_1_shoot","path":"sprites/spr_enm_ship_1_shoot/spr_enm_ship_1_shoot.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 33.0,
+    "playbackSpeed": 60.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

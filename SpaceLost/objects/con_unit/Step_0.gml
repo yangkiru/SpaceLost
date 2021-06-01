@@ -7,16 +7,13 @@ if (control == self) {
 		closet_ship_dist = get_distance(closet_ship, self, true);
 }
 // Inputs
-show_debug_message(parent == con_em_unit);
-show_debug_message(control == self);
-show_debug_message(closet_ship != noone);
 if (owner.object_index == obj_player_unit) {
 	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
 	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
 	lInput = keyboard_check_released(ord("F"));
 } else if (parent == con_em_unit && control == self && closet_ship != noone) {
 	enemy_input();
-} else {
+} else if (parent == con_em_unit && control == self) {
 	var target = obj_player_unit;
 	var pd = point_direction(target.x, target.y, x, y);
 	hInput = lengthdir_x(1, pd);
@@ -73,6 +70,7 @@ if (control == self) {
 			break;
 	}
 } else {
+	show_debug_message(object_get_name(control.object_index));
 	switch (state) {
 		case States.MoveStart :
 			target_spr(grab ? spr_swim_grab : spr_swim);
