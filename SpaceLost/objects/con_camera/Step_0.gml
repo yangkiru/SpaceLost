@@ -19,8 +19,8 @@ if (current_zoom != target_zoom) {
 current_zoom = lerp(current_zoom, target_zoom, t);
 	
 
-x += (xTo - x)/25;
-y += (yTo - y)/25;
+x += (xTo - x)/10;
+y += (yTo - y)/10;
 
 if (follow != noone) {
 	xTo = follow.x;

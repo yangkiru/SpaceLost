@@ -1,0 +1,1 @@
+target = con_camera;
