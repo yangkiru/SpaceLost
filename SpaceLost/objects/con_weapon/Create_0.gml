@@ -7,13 +7,13 @@ function attack() {
 		phy_speed_x = 0;
 		phy_speed_y = 0;
 		
-		phy_bullet = true;
 		physics_apply_local_impulse(0, 0, 0, -other.pro_force);
 		phy_angular_velocity = 0;
 		owner = other.owner;
 		dmg = other.pro_dmg;
 		alarm[0] = other.pro_lifetime;
 		kb_force = other.kb_force;
+		pierce = 1;
 	}
 	is_cool = false;
 	if (owner.spr_shoot != noone) {
@@ -21,6 +21,11 @@ function attack() {
 		owner.image_index = 0;
 	}
 	alarm[0] = shoot_spd;
+	var eff = obj_ship_shoot_eff_pool.activate_obj();
+	eff.parent = self;
+	eff.x = x;
+	eff.y = y;
+	eff.image_angle = image_angle;
 }
 
 function equip_weapon() {

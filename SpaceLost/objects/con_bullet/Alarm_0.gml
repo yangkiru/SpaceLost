@@ -1,1 +1,2 @@
-con_bullet_pool.deactivate_obj(self);
+if (active)
+	con_bullet_pool.deactivate_obj(self);

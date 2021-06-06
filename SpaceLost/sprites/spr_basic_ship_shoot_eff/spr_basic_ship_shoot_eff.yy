@@ -137,7 +137,7 @@
     "spriteId": {"name":"spr_basic_ship_shoot_eff","path":"sprites/spr_basic_ship_shoot_eff/spr_basic_ship_shoot_eff.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 60.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
