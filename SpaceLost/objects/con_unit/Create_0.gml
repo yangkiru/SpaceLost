@@ -111,25 +111,37 @@ function connect_rope() {
 	}
 }
 
+function move() {
+	
+}
+
 function movement() {
 	if control == self { // Control player
 		var sum = abs(hInput) + abs(vInput);
 		var spd = mSpd * mSpd_const;
 		if sum != 0
 		physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
-	} else { // Contorl ship
-		if (move_target == noone || !instance_exists(move_target)) {
-			state = States.MoveStop;
-			return;
-		}
-		var pd = point_direction(phy_position_x,phy_position_y,move_target.x,move_target.y);
-		var spd = mSpd * mSpd_const;
-		var lx = lengthdir_x(1, pd);
-		var ly = lengthdir_y(1, pd);
-		var sum = abs(lx) + abs(ly);
-					
-		physics_apply_impulse(phy_position_x,phy_position_y,spd * lx / sum, spd * ly / sum);
 	}
+	//else { // Contorl ship
+	//	if (move_target == noone || !instance_exists(move_target)) {
+	//		state = States.MoveStop;
+	//		return;
+	//	}
+	//	var pd = point_direction(phy_position_x,phy_position_y,move_target.x,move_target.y);
+	//	var spd = mSpd * mSpd_const;
+	//	var lx = lengthdir_x(1, pd);
+	//	var ly = lengthdir_y(1, pd);
+	//	var sum = abs(lx) + abs(ly);
+					
+	//	physics_apply_impulse(phy_position_x,phy_position_y,spd * lx / sum, spd * ly / sum);
+	//}
+}
+
+function turn() {
+	var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y-vInput) + 90; // get direction
+	var dd = angle_difference(phy_rotation, pd);
+	phy_rotation -= min(abs(dd), tSpd * tSpd_const) * sign(dd);
+	phy_angular_velocity = 0;
 }
 
 function enemy_input() {}

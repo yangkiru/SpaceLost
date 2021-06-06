@@ -44,6 +44,7 @@
     {"id":{"name":"con_reset","path":"objects/con_reset/con_reset.yy",},"order":1,},
     {"id":{"name":"object_get_depth","path":"scripts/object_get_depth/object_get_depth.yy",},"order":0,},
     {"id":{"name":"spr_player_idle_grab","path":"sprites/spr_player_idle_grab/spr_player_idle_grab.yy",},"order":3,},
+    {"id":{"name":"is_animation_end","path":"scripts/is_animation_end/is_animation_end.yy",},"order":20,},
     {"id":{"name":"instance_nth_nearest","path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},"order":8,},
     {"id":{"name":"obj_bst_ply_left","path":"objects/obj_bst_ply_left/obj_bst_ply_left.yy",},"order":3,},
     {"id":{"name":"con_weapon","path":"objects/con_weapon/con_weapon.yy",},"order":0,},
