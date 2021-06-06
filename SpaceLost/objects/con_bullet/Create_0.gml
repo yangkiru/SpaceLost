@@ -2,6 +2,7 @@ dmg = 1;
 owner = noone;
 kb_force = 0.13;
 pierce = 1;
+active = false;
 
 function push(force) {
 	with(other) {

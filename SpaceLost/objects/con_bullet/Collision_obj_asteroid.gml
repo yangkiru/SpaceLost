@@ -1,4 +1,4 @@
-if (owner == noone) return;
+if (!active || owner == noone) return;
 con_bullet_pool.deactivate_obj(self);
 
 if (--pierce >= 0)

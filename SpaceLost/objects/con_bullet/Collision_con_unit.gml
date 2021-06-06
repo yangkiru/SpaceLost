@@ -1,4 +1,4 @@
-if (owner == noone || other.owner == owner.owner) return;
+if (!active || owner == noone || other.owner == owner.owner) return;
 
 if (--pierce >= 0) {
 	other.damage(dmg, owner);
