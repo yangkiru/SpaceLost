@@ -3,6 +3,7 @@ owner = noone;
 kb_force = 0.13;
 pierce = 1;
 active = false;
+depth -= 3;
 
 function push(force) {
 	with(other) {

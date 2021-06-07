@@ -22,10 +22,16 @@ function attack() {
 	}
 	alarm[0] = shoot_spd;
 	var eff = obj_ship_shoot_eff_pool.activate_obj();
-	eff.parent = self;
+	eff.parent = bullet;
 	eff.x = x;
 	eff.y = y;
 	eff.image_angle = image_angle;
+	//with (eff) {
+	//	phy_position_x = other.x;
+	//	phy_position_y = other.y;
+	//	phy_rotation = -other.image_angle;
+	//	physics_apply_local_impulse(0, 0, 0, -2 * other.owner.phy_speed);
+	//}
 }
 
 function equip_weapon() {

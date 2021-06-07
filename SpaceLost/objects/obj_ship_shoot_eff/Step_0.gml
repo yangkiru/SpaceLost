@@ -2,7 +2,6 @@ if (image_index >= image_number - (image_speed * sprite_get_speed(sprite_index) 
 	obj_ship_shoot_eff_pool.deactivate_obj(self);
 	
 if (parent != noone && instance_exists(parent)) {
-	x = parent.x;
-	y = parent.y;
-	image_angle = parent.image_angle;
+	x = lerp(x, parent.x, 0.003 * parent.owner.phy_speed);
+	y = lerp(y, parent.y, 0.003 * parent.owner.phy_speed);
 }
