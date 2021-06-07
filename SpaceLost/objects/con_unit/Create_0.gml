@@ -144,7 +144,46 @@ function turn() {
 	phy_angular_velocity = 0;
 }
 
-function enemy_input() {}
+function player_input() {
+	hInput = keyboard_check(vk_right) - keyboard_check(vk_left); // left right arrows
+	vInput = keyboard_check(vk_down) - keyboard_check(vk_up); // up down arrows
+	lInput = keyboard_check_released(ord("F"));
+}
+
+function enemy_input() {
+	if (closet_ship != noone) {
+		ride_input();
+	} else {
+		run_input();
+	}
+	
+}
+
+function ride_input() {
+	closet_ship = instance_empty_ship_nearest(x, y, con_ship, 1);
+	
+	if (closet_ship != noone) {
+		closet_ship_dist = get_distance(closet_ship, self, true);
+		if (closet_ship_dist > rope_length) {
+			move_target = closet_ship;
+						
+			var dir = point_direction(x, y, move_target.x, move_target.y);
+			hInput = lengthdir_x(1, dir);
+			vInput = lengthdir_y(1, dir);
+		} else {
+			lInput = 1;
+		}
+	}
+}
+
+function run_input() {
+		var target = obj_player_unit;
+		var pd = point_direction(target.x, target.y, x, y);
+		hInput = lengthdir_x(1, pd);
+		vInput = lengthdir_y(1, pd);
+	
+		lInput = 0;
+}
 
 function enemy_movement() {}
 
