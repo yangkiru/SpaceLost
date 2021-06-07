@@ -3,6 +3,9 @@
 rope_length = real(unit_data[? "rope_length"]);
 mSpd = real(unit_data[? "mSpd"]);
 mSpd_const = real(unit_data[? "mSpd_const"]);
+if (object_get_parent(object_index) == con_em_unit) 
+	mSpd_run = real(unit_data[? "mSpd_run"]);
+mSpd_run = real(unit_data[? "mSpd_run"]);
 tSpd = real(unit_data[? "tSpd"]);
 tSpd_const = real(unit_data[? "tSpd_const"]);
 rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
@@ -15,6 +18,7 @@ const_kb = real(unit_data[? "const_kb"]);
 #region Variables
 hp = hp_max;
 oxygen = oxygen_max;
+mSpd_multi = 1;
 
 // Rope
 rope = noone;
@@ -118,7 +122,7 @@ function move() {
 function movement() {
 	if control == self { // Control player
 		var sum = abs(hInput) + abs(vInput);
-		var spd = mSpd * mSpd_const;
+		var spd = mSpd * mSpd_const * mSpd_multi;
 		if sum != 0
 		physics_apply_impulse(phy_position_x, phy_position_y, spd * hInput / sum, spd * vInput / sum);
 	}
@@ -181,7 +185,7 @@ function run_input() {
 		var pd = point_direction(target.x, target.y, x, y);
 		hInput = lengthdir_x(1, pd);
 		vInput = lengthdir_y(1, pd);
-	
+		mSpd_multi = mSpd_run;
 		lInput = 0;
 }
 
