@@ -21,6 +21,21 @@ function enemy_input() {
 		}
 	}
 	
+	if (control == self) {
+		if (closet_ship != noone) {
+			if (closet_ship_dist > rope_length) {
+				move_target = closet_ship;
+						
+				var dir = point_direction(x, y, move_target.x, move_target.y);
+				hInput = lengthdir_x(1, dir);
+				vInput = lengthdir_y(1, dir);
+			} else {
+				lInput = 1;
+			}
+		} else {
+			move_target = noone;
+	}
+	
 	switch (state) {
 		case States.MoveStop :
 			move_target = noone;
@@ -46,8 +61,13 @@ function enemy_input() {
 					state = States.MoveStop;
 				}
 			break;
+			}
 		}
 	}
+}
+
+function move() {
+	enemy_movement();
 }
 
 function enemy_movement() {
@@ -58,5 +78,4 @@ function enemy_movement() {
 		sequence_instance_override_object(_seq_inst, con_em_unit, self);
 		layer_sequence_speedscale(_seq, 0.8);
 	}
-	state = States.Turning;
 }
