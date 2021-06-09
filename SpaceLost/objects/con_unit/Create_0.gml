@@ -5,7 +5,6 @@ mSpd = real(unit_data[? "mSpd"]);
 mSpd_const = real(unit_data[? "mSpd_const"]);
 if (object_get_parent(object_index) == con_em_unit) 
 	mSpd_run = real(unit_data[? "mSpd_run"]);
-mSpd_run = real(unit_data[? "mSpd_run"]);
 tSpd = real(unit_data[? "tSpd"]);
 tSpd_const = real(unit_data[? "tSpd_const"]);
 rope_rot_spd = real(unit_data[? "rope_rot_spd"]);
@@ -178,6 +177,8 @@ function ride_input() {
 			lInput = 1;
 		}
 	}
+	
+	mSpd_multi = 1;
 }
 
 function run_input() {
