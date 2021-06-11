@@ -44,6 +44,7 @@ if owner != noone {
 	
 	// Move Ship
 	if (hInput != 0 || vInput != 0) { // if got key
+		oil -= 1;
 		var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y+vInput) + 90; // get direction
 		var dd = angle_difference(phy_rotation, pd);
 		if (bInput && bCurrent >= 0) {

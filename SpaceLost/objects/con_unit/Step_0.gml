@@ -7,7 +7,7 @@ if (control == self) {
 		closet_ship_dist = get_distance(closet_ship, self, true);
 }
 // Inputs
-if (control.object_index == obj_player_unit) {
+if (control.owner.object_index == obj_player_unit) {
 	player_input();
 } else if (parent == con_em_unit && control == self) {
 	enemy_input();

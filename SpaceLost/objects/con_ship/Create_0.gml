@@ -14,6 +14,8 @@ bCurrent = bMax;
 bConsume = real(ship_data[? "bConsume"]);
 bCoolSpd = real(ship_data[? "bCoolSpd"]);
 const_kb = real(ship_data[? "const_kb"]);
+oil_max = real(ship_data[? "oil_max"]);
+oil = oil_max;
 
 hInput = 0;
 vInput = 0;
