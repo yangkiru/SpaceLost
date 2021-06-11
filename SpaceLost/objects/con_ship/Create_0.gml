@@ -16,6 +16,7 @@ bCoolSpd = real(ship_data[? "bCoolSpd"]);
 const_kb = real(ship_data[? "const_kb"]);
 oil_max = real(ship_data[? "oil_max"]);
 oil = oil_max;
+oil_cons = real(ship_data[? "oil_cons"]);
 
 hInput = 0;
 vInput = 0;
@@ -31,7 +32,7 @@ depth = ObjectDepth.Ship;
 spr_original = noone;
 spr_shoot = noone;
 
-t_bCool = 0;
+bHeat = 0;
 
 on_destroy = noone;
 on_destroy_var = noone;

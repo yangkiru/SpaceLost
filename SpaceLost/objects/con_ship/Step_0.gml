@@ -1,4 +1,5 @@
-//show_debug_message(string(object_get_name(object_index)) + "'s control is " + string(control == noone ? "noone" : object_get_name(control.object_index)));
+bHeat = max(0, bHeat-1);
+
 if owner != noone {
 	// Player Input
 	if (owner.owner.object_index == obj_player_unit) {
@@ -43,21 +44,31 @@ if owner != noone {
 	}
 	
 	// Move Ship
-	if (hInput != 0 || vInput != 0) { // if got key
-		oil -= 1;
+	if ((hInput != 0 || vInput != 0) && oil > 0) { // if got key
+		oil = max(0, oil - oil_cons);
 		var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y+vInput) + 90; // get direction
 		var dd = angle_difference(phy_rotation, pd);
-		if (bInput && bCurrent >= 0) {
-			bCurrent -= bConsume / room_speed;
-			t_bCool = 60;
-		} else bInput = 0;
+		show_debug_message(bCurrent);
+		show_debug_message(bHeat);
+		if (bCurrent <= 0 || bHeat > 0) {
+			bInput = 0;
+			if(bHeat == 0) bHeat = 120;
+		}
+		
+		if (bInput && bCurrent >= 0 && bHeat == 0) {
+			bCurrent = max(0, bCurrent-(bConsume / room_speed));
+		}
 		phy_rotation -= min(abs(dd), tSpd * tSpd_const * (bInput ? btSpd : 1)) * sign(dd);
 		force_dir = dd;
 		phy_angular_velocity = 0;
 		physics_apply_local_force(0, 0, 0, -mSpd * mSpd_const * (bInput ? bmSpd : 1)); // move foward
 		
-	} else force_dir = 0;
-	
+	} else { // out of oil
+		force_dir = 0;
+		bInput = 0;
+		hInput = 0;
+		vInput = 0;
+	}
 	
 } else {
 	hInput = 0;

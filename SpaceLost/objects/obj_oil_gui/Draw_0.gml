@@ -9,10 +9,9 @@ if( !surface_exists(surf) ){
     surf = surface_create( h,v );
 }
 
-var numberofsections = 60; // there is no draw_get_circle_precision() else I would use that here
+var numberofsections = 90; // there is no draw_get_circle_precision() else I would use that here
 var sizeofsection = 360/numberofsections;
 var val = (target.oil / target.oil_max) * numberofsections;
-show_debug_message(val);
 if (val > 0) {
 	surface_set_target( surf );
 		draw_clear_alpha(c_white,0);
