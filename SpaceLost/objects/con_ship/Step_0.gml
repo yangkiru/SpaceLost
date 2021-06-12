@@ -1,5 +1,7 @@
 bHeat = max(0, bHeat-1);
 
+hit_color_step();
+
 if owner != noone {
 	// Player Input
 	if (owner.owner.object_index == obj_player_unit) {
@@ -48,8 +50,6 @@ if owner != noone {
 		oil = max(0, oil - oil_cons);
 		var pd = point_direction(phy_position_x,phy_position_y,phy_position_x+hInput,phy_position_y+vInput) + 90; // get direction
 		var dd = angle_difference(phy_rotation, pd);
-		show_debug_message(bCurrent);
-		show_debug_message(bHeat);
 		if (bCurrent <= 0 || bHeat > 0) {
 			bInput = 0;
 			if(bHeat == 0) bHeat = 120;

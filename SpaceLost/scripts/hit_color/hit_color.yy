@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "trail",
-    "path": "folders/Scripts/trail.yy",
+    "name": "Unit",
+    "path": "folders/Scripts/Unit.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_create_trail",
+  "name": "hit_color",
   "tags": [],
   "resourceType": "GMScript",
 }

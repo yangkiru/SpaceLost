@@ -1,4 +1,4 @@
-//instance_nth_nearest(x, y, con_ship, 1);
+hit_color_step();
 
 // Closet Ship
 if (control == self) {

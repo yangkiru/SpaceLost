@@ -56,10 +56,13 @@ state = States.Idle;
 move_target = noone;
 grab = -1;
 
+hit_color_create();
+
 #endregion
 #region Functions
 function damage(value, attacker) {
 	hp -= value;
+	hit_color_damage();
 	if (hp <= 0) { // Destroy
 		destroy(attacker);
 	} else show_debug_message(object_get_name(object_index) + " got " + string(value) + " damage!");
@@ -106,7 +109,7 @@ function connect_rope() {
 			rope = connector.connect(noone);
 		else physics_joint_delete(rope);
 		//rope = noone;
-		control.owner = control;
+		control.owner = noone;
 		control = self;
 		if (owner.object_index == obj_player_unit)
 			con_camera.follow = self;

@@ -22,7 +22,7 @@ hInput = 0;
 vInput = 0;
 bInput = 0;
 force_dir = 0;
-owner = self;
+owner = noone;
 parent = object_get_parent(object_index);
 camera_zoom = 2;
 target = noone;
@@ -37,8 +37,11 @@ bHeat = 0;
 on_destroy = noone;
 on_destroy_var = noone;
 
+hit_color_create();
+
 function damage(value, attacker) {
 	hp -= value;
+	hit_color_damage();
 	
 	if (hp <= 0) { // Destroy
 		destroy(attacker);

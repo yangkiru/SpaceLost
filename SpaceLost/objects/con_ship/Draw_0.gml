@@ -1,4 +1,4 @@
-draw_self();
+hit_color_draw();
 //draw_arrow(x, y, x + hInput * 500, y - vInput * 500, 50);
 if (bInput) {
 	var dir = -phy_rotation - 90;//point_direction(x, y, x - phy_speed_x, y - phy_speed_y);

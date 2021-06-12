@@ -16,7 +16,7 @@ function instance_empty_ship_nearest(xx, yy, object, n){
 	    list = ds_priority_create();
 	    nearest = noone;
 	    with (object) {
-			if (owner == self) {
+			if (owner == noone) {
 				ds_priority_add(list,self,get_distance_point(xx,yy, x, y, false));
 			}
 		}
