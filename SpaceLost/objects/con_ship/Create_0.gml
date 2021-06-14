@@ -37,6 +37,8 @@ bHeat = 0;
 on_destroy = noone;
 on_destroy_var = noone;
 
+inventory = instance_create_layer(x, y, "Inventories", con_inventory);
+
 hit_color_create();
 
 function damage(value, attacker) {
