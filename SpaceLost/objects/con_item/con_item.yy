@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Sprite39",
-    "path": "sprites/Sprite39/Sprite39.yy",
+    "name": "spr_temp",
+    "path": "sprites/spr_temp/spr_temp.yy",
   },
   "solid": false,
   "visible": true,

@@ -14,6 +14,5 @@ if (obj_parent == con_ship) {
 	var dist = get_distance(owner, self, false)
 	if (dist < 100) {
 		ds_list_add(obj_parent.inventory.list, self);
-		layer = layer_get_id("Inventories");
 	}
 }
