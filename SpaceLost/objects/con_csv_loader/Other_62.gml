@@ -4,6 +4,7 @@ if getfile != 0 {
 }
 else {
 	global.data = csv_loader(fname);
+
 	if (global.data != noone)
 		room_goto_next();
 	else {

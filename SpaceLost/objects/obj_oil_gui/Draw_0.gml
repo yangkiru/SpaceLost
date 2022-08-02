@@ -3,6 +3,8 @@ var v = 128;
 var hm = h * 0.5;
 var vm = v * 0.5;
 var r = 64;
+if(!instance_exists(obj_player_unit)) return;
+
 target = obj_player_unit.control;
 if (target == noone || target.parent != con_ship) return;
 if( !surface_exists(surf) ){
